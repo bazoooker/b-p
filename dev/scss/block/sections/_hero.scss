@@ -1,0 +1,39 @@
+.hero {
+	@include flex-col(nowrap, space-between, stretch);
+	padding: 2rem 0 19rem 0;
+
+	// height: 77.6rem;
+	height: 100vh;
+
+	background-image: url(/img/bg/bg-hero.jpg);
+	background-position: 50% 50%;
+	background-attachment: fixed;
+	background-size: cover;
+	background-repeat: no-repeat;
+
+	h1 {
+		padding: 0 4rem;
+	}
+}
+
+@media screen and (max-width: 1199px) {
+    .hero {
+    	height: 70rem;
+
+    	background-attachment: scroll;
+
+    	h1 {
+			padding: 0 1rem;
+		}
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .hero {
+    	height: 65.5rem;
+
+    	h1 {
+			padding: 0 1rem;
+		}
+    }
+}

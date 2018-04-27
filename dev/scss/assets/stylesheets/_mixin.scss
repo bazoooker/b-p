@@ -1,0 +1,19 @@
+@mixin flex-col($wrap, $jusify-content, $align-items) {
+    display: flex;
+    flex-flow: column $wrap;
+
+    justify-content: $jusify-content;
+    align-items: $align-items;
+}
+@mixin flex-row($wrap, $jusify-content, $align-items) {
+    display: flex;
+    flex-flow: row $wrap;
+
+    justify-content: $jusify-content;
+    align-items: $align-items;
+}
+
+@mixin pseudo {
+	position: absolute;
+	content: '';
+}

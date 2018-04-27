@@ -1,0 +1,29 @@
+.page-footer {
+	flex: none;
+	background-color: $color_main;
+	padding: 5rem 0;
+	width: 100%;
+
+	.container {
+		@include flex-row(wrap, space-between, flex-start);
+		justify-content: space-between;
+		align-items: center;
+
+		padding: 3rem 2rem 3rem 1rem;	
+	}
+
+	a {
+		color: #fff;
+	}
+}
+
+@media screen and (max-width: 667px) {
+	.page-footer {
+		.container {
+			@include flex-col(nowrap, space-between, center);
+		}
+		.tel {
+			text-align: center;
+		}
+	}
+}

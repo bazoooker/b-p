@@ -1,0 +1,11 @@
+.btn-holder {
+	@include flex-row(wrap, space-between, flex-start);
+
+	a {
+		width: 220px;
+
+		&:first-child {
+			margin-right: 3rem;
+		}
+	}
+}

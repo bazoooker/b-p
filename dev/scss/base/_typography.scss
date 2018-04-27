@@ -1,0 +1,84 @@
+html {
+    font-size: 62.5%;
+    font-family: 'Acrom', sans-serif;
+    font-weight: 400;
+    color: #5e5e5e;
+}
+
+body {
+    font-size: 1.4rem;
+}
+h1 {
+    font-size: 6.1rem;
+    color: #fff;
+    text-shadow: -1px 0 1px rgba(0, 0, 0, .5);
+    font-weight: 800;
+}
+h2 {
+    font-size: 2.6rem;
+    font-weight: 300;
+    color: $color_main-dark;
+}
+
+h3 { 
+    font-size: 2rem;
+    color: $color_main-dark;
+    font-weight: 300;
+ }
+
+section {
+    h1:first-child, h2:first-child, h3:first-child {
+        margin-top: 0;
+    }
+}
+p, span, ul, li, button  {
+    color: #5e5e5e;
+    font-size: 1.4rem;
+}
+a {
+    color: $color_main;
+    text-decoration: underline;
+}
+	a:hover {
+	    text-decoration: none;
+	}
+	a:visited {
+	    color: #296d5c;
+	}
+	a:focus {
+	    color: #1b997b;
+	}
+table {}
+table tr {}
+
+ul {
+    padding-left: 1.4rem;
+    margin-left: 1.5rem;
+    li {
+        margin-bottom: 1rem;
+
+        // &:before {
+        //     @include pseudo;
+
+        //     left: -1.4rem;
+        //     top: .5rem;
+
+        //     width: .5rem;
+        //     height: .2rem;
+
+        //     background-color: $color_main-dark;
+        // }
+    }
+}
+
+// @media screen and (max-width: 1024px) {
+//     html {
+//         font-size: 57.5%;
+//     }
+// }
+
+@media screen and (max-width: 500px) {
+    h1 {
+        font-size: 4.5rem;
+    }
+}
