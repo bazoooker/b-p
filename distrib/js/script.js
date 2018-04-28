@@ -1,6 +1,6 @@
- $(document).ready(function() {
-  $('select').niceSelect();
-});
+//  $(document).ready(function() {
+//   $('select').niceSelect();
+// });
 
 	/* МОДАЛЬНЫЕ ОКНА */
 $(document).ready(function(){        

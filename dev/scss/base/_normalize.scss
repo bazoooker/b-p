@@ -30,21 +30,6 @@ body {
     margin: 0;
 }
 
-.page-wrapper {
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: stretch;
-    justify-content: space-between;
-
-    min-height: 100%;
-
-    .page-content {
-      flex-grow: 1;
-      width: 100%;
-      // margin-bottom: 1.5rem;
-    }
-}
-
 *, *:before, *:after {
   box-sizing: border-box;
 }

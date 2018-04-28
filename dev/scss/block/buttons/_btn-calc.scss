@@ -1,0 +1,8 @@
+.btn-calc {
+	@include flex-row(nowrap, flex-start, center);
+	background:$color_green-d;
+	width: 29rem;
+	height: 6.6rem;
+	margin-bottom: 1.6rem;
+	cursor: pointer;
+}

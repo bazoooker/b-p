@@ -1,0 +1,22 @@
+.btn-menu {
+	float: left;
+	@include flex-col(nowrap, center, center);
+	width: 5.5rem;
+	height: 5rem;
+	padding: 1.5rem 1.7rem;
+	background-color: rgba(255,255,255, .4);
+
+
+	cursor: pointer;
+}
+
+.btn-menu__burger-bar {
+	width: 100%;
+	height: 3px;
+	margin-bottom: .3rem;
+	background: #fff;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}

@@ -1,123 +1,67 @@
 .logo {
 	display: inline-block;
-	width: 27.2rem;
-	font-size: 2.5rem;
-	font-weight: 300;
+	width: 30rem;
+	height: 17.5rem;
 	text-decoration: none;
-	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
 	
-	// background-repeat: no-repeat;
-	// background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
 
 	transition: 200ms;
-	// background-image: url(/img/logo-ret.png); 
-	// background-size: 22.6rem;
+	background-image: url(/img/logo.jpg); 
+	background-size: cover;
 
-	&:hover {
-		opacity: .75;
-	}
+	// &:hover {
+	// 	opacity: .75;
+	// }
 
-	&:visited {
-		color: #fff;
-	}
-}
-
-.page-header__nav .logo_header,
-.logo_header {
-	height: 100%;
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    font-size: 2.5rem;
-    line-height: 2.5rem;
-}
-.logo_footer {
-	height: 11.2rem;
-	line-height: 2.5rem;
-
-}
-.logo_menu {
-	height: 8rem;
-	color: #fff;
-	// background-size: contain;
-	// background-position: 0% 50%;
+	// &:visited {
+	// 	color: #fff;
+	// }
 }
 
 /* icon layout */
 
 .icon {
-	// @include flex-row(wrap, space-between, flex-start);
+	@include flex-row(wrap, space-between, flex-start);
 	position: relative;
 	align-items: center;
 	justify-content: center;
 	width: 34px;
 	height: 34px;
-	border-radius: 50%;
 
 	transition: 150ms;
-}
-	.icon:after {
-		// @include pseudo;
-		width: 15px;
-		height: 15px;
-		background-size: 15px;
 
+	&:after {
+		@include pseudo;
 		top: 50%;
 	    left: 50%;
 	    transform: translateY(-50%) translateX(-50%);
 	}
-
-/* icon backgrounds */
-
-.icon_tel {	background-color: #fff; }
-	.icon_tel:after { background-image: url(/img/icons/icon-phone_black.png); }
-
-.icon_tel-white { background-color: $color_main; }
-	.icon_tel-white:after {	background-image: url(/img/icons/icon-phone_white.png);	}
-
-.icon_mail { background-color: #fff; }
-	.icon_mail:after { background-image: url(/img/icons/icon-mail_black.png); }
-
-.icon_mail-white { background-color: $color_main; }
-	.icon_mail-white:after { background-image: url(/img/icons/icon-mail_white.png); }
-.icon_home { background-color: #e3a122; margin: 0 auto; }
-	.icon_home:after { background-image: url(/img/icons/icon-home.png); }
-
+}
+	
 /* icon position */
 
-.icon_tel,
-.icon_tel-white,
-.icon_mail,
-.icon_mail-white {
-	margin-right: 1.5rem;
+.icon_calc {
+	background: url(/img/icons/i-calc.png);
+	width: 4rem;
+	height: 4rem;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: 4rem;
+	margin: 0 2rem 0 3.5rem;
 }
 
+.icon_specials {
+	background: url(/img/icons/i-spec.png);
+	width: 4rem;
+	height: 4rem;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: 3.5rem;
+	margin: 0 2rem 0 3.5rem;
+}
 
-.icon_home {
-	overflow: hidden;
-	// &:hover {
-	// 	background-color: orange;
-	// }
-}
-.icon_star {
-	width: 46px !important;
-	height: 46px !important;
-	margin-bottom: 2rem;
-}
-	.icon_star:after { 
-		width: 100%;
-		height: 100%;
-		background-image: url(/img/icons/icon-star_outline.png); 
-		background-size: 100%;
-		background-repeat: no-repeat;
-	}
-.icon_loc {
-	background-color: transparent;
-    margin: 0 0 0 -1.6rem;
-	&:after {
-		background-image: url(/img/icons/icon-location.png);
-	}
-}
 
 @media screen and (max-width: 1024px) {
 	.page-header__nav .logo_header,

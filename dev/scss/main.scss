@@ -10,13 +10,70 @@
 @import "base/fonts";
 @import "base/typography";
 
+// buttons
+@import "block/buttons/btn-menu";
+@import "block/buttons/btn-home";
+@import "block/buttons/btn-calc";
+@import "block/buttons/btn-specials";
+
+// icons
+@import "block/icons/icons";
+
 // grid & general layout
 @import "block/grid/container";
-@import "block/grid/content-container";
+// @import "block/grid/content-container";
 @import "block/grid/grid";
 @import "block/grid/inner-page";
 
 // accordeon
-@import "block/accordeon/accordeon";
+// @import "block/accordeon/accordeon";
 
-// buttons
+
+
+// page layout
+@import "block/page-header";
+@import "block/page-footer";
+@import "block/page-wrapper";
+@import "block/page-content";
+
+// hero
+@import "block/hero";
+@import "block/weather";
+@import "block/cta";
+
+// navigation
+@import "block/nav-main";
+
+// press
+@import "block/press-section";
+
+// news
+@import "block/news-lead";
+@import "block/news-list";
+@import "block/news-link";
+
+// articles
+@import "block/articles-lead";
+@import "block/articles-list";
+@import "block/article-link";
+
+// blog
+@import "block/blog-lead";
+@import "block/blog-list";
+@import "block/blog-link";
+
+// subscribe
+@import "block/subscribe";
+@import "block/follow-insta";
+
+// objects
+@import "block/objects";
+@import "block/objects-list";
+@import "block/object-thumbnail";
+
+// feedback
+@import "block/feedback-list";
+@import "block/feedback-item";
+
+
+

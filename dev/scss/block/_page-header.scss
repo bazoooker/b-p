@@ -1,0 +1,21 @@
+.page-header {
+
+	color: #fff;
+	z-index: 2;
+
+	&:before {
+		@include pseudo;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 5rem;
+		background-color: rgb(255,255,255);
+		background-color: rgba(255,255,255,.3);
+
+	}
+
+	.container {
+		position: relative;
+		@include flex-row(nowrap, space-between, flex-start);
+	}
+}

@@ -1,0 +1,32 @@
+.nav-main {
+	flex-grow: 1;
+
+	@include flex-row(nowrap, space-between, center);
+	height: 5rem;
+
+	&>a {
+		color: #fff;
+	}
+}
+
+.nav-main__buttons {
+	// @include flex-row(nowrap, flex-start, center);
+	width: 11rem;
+	overflow: auto;
+	// margin-right: auto;
+}
+
+.nav-main__links {
+	
+	a {
+		margin-right: 5rem;
+		color: #fff;
+		text-transform: uppercase;
+		text-decoration: none;
+		font-weight: 600;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
