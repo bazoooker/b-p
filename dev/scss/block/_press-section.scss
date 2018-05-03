@@ -1,1 +1,60 @@
-.press-section {}
+.press-section {
+	@include flex-row(wrap, space-between, stretch);
+	margin-bottom: $gutter;
+}
+
+
+// sections
+.press-section_news {
+	
+	flex: 1 1 100%;
+}
+.press-section_articles {
+	background-color: lightgray;
+	flex: 1 1 40%;
+	margin-right: $gutter;
+}
+.press-section_blog {
+	background-color: lightgray;
+	flex: 1 1 40%;
+	margin-right: 0;
+}
+
+.press-section_events {
+	background-color: lightgray;
+	flex: 1 1 40%;
+	margin-right: $gutter;
+}
+
+.press-section_subscribe {
+	flex: 1 1 40%;
+	margin-right: 0;
+
+	@include flex-row(nowrap, space-between, flex-start);
+}
+
+
+.press-section__rubric {
+	flex: 1 1 100%;
+	margin-bottom: $gutter;
+
+	span {
+		display: table-cell;
+		vertical-align: middle;
+		text-align: center;
+		width: 10rem;
+		height: 3rem;
+		
+		color: #fff;
+	}
+}
+
+.press-section__rubric_news {
+	background-color: $color_green-l;
+}
+.press-section__rubric_articles {
+	background-color: $color_blue-d;
+}
+.press-section__rubric_blog {
+	background-color: $color_blue-l;
+}

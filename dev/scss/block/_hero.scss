@@ -1,12 +1,9 @@
 .hero {
-	// padding: 2rem 0 19rem 0;
-
-
-
 	height: 100vh;
 
 	padding-top: 20rem;
 	margin-top: -20rem;
+	margin-bottom: $gutter;
 
 	background-image: url(/img/bg/hero.jpg);
 	background-position: 50% 0%;
@@ -15,9 +12,10 @@
 	background-repeat: no-repeat;
 
 	h1 {
-		padding: 16rem 0 16rem 0;
+		padding: 16rem 0 7.5rem 0;
 		font-size: 3.6rem;
-
+		text-transform: uppercase;
+		margin: 0;
 	}
 
 	.container {
@@ -27,8 +25,29 @@
 
 .hero__offer {
 	flex: 1 1 70%;
+	
 }
 .hero__cta {
 	flex: 1 1 30%;
 	align-self: flex-end;
+}
+
+.hero__num-col {
+	float: left;
+	margin-right: 8rem;
+	p,span {
+		color: #fff;
+		text-shadow: -1px 0 1px rgba(0, 0, 0, 0.5);
+	}
+
+	p {
+		font-size: 4.6rem;
+		font-weight: 900;
+		margin: 0 0 .5rem 0;
+	}
+
+	span {
+		font-size: 1.8rem;
+		font-weight: 500;
+	}
 }

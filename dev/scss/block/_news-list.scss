@@ -1,1 +1,13 @@
-.news-list {}
+.news-list {
+	@include flex-row(wrap, flex-start, flex-start);
+
+	// background-color: khaki;
+	flex: 1 1 40%;
+	margin: 0;
+	padding-left: 0;
+
+	list-style: none;
+	
+	// убрать на мобилках
+	min-height: 28rem;
+}
