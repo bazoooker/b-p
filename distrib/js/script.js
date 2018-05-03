@@ -2,6 +2,19 @@
 //   $('select').niceSelect();
 // });
 
+
+
+$(document).ready(function(){ 
+    var swiperEvents = new Swiper('.swiper-container', {
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+});
+
+
+
 	/* МОДАЛЬНЫЕ ОКНА */
 $(document).ready(function(){        
     $(".callback-link").on('click', function(){

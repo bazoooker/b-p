@@ -1,5 +1,14 @@
 .follow-insta {
-	background-color: lightgray;
+	background-color: #efefef;
 	flex: 1 1 40%;
+	padding: 2.1rem;
 	margin-right: $gutter;
+}
+
+.follow-insta__heading {
+	color: $color_green-d;
+	text-transform: uppercase;
+	text-align: center;
+	font-weight: 600;
+	margin: 0 0 1.4rem 0;
 }

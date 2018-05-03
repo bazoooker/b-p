@@ -1,1 +1,21 @@
-.blog-link {}
+.blog-link {
+	flex: 1 1 40%;
+	margin-right: $gutter;
+
+	&:nth-child(even) {
+		margin-right: 0;
+	}
+}
+
+.blog-link__heading {
+	color: $color_blue-l;
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-bottom: .5rem;
+}
+
+.blog-link__date {
+	font-size: 1rem;
+    color: #515151;
+    opacity: .5;
+}

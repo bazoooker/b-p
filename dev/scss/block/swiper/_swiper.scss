@@ -1,80 +1,34 @@
 .swiper {}
-.swiper-container {}
+.swiper-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
 
 .swiper-controls-holder {
 	position: relative;
 }
 
-// hero slider
-
-.swiper-container-main {
-	position: relative;
-	height: 43rem;
-	overflow: hidden;
-
-	margin-bottom: 4rem;
-
-	.swiper-slide {
-		background-size: cover;
-
-		.container {
-			position: relative;
-
-			height: 100%;
-
-			background-size: cover;
-			background-position: 50% 50%;
-		}
-	}
+.swiper-button-next {
+	width: 1.9rem;
+	height: 1.9rem;
+	margin: 0;
+	
+	background-image: url(/img/icons/i-swiper-event-next.png);
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: 1.4rem;
 }
-
-
-// products\categories slider
-
-.swiper-container-products {
-	position: relative;
-	height: 27rem;
-	overflow: hidden;
-
-	.swiper-slide {
-		background-size: cover;
-
-		@include flex-col;
-
-		.container {
-			position: relative;
-
-			height: 100%;
-
-			background-size: cover;
-			background-position: 50% 50%;
-		}
-	}
-}
-
-// news slider
-
-.swiper-container-news {
-	position: relative;
-	height: 17rem;
-	overflow: hidden;
-
-	margin-bottom: 4rem;
-	padding-bottom: 3rem; /*for pagination*/
-
-	.swiper-slide {
-
-		height: 13rem;
-
-		.container {
-			position: relative;
-
-			height: 100%;
-
-			background-size: cover;
-			background-position: 50% 50%;
-		}
-	}
+.swiper-button-prev {
+	width: 1.9rem;
+	height: 1.9rem;
+	margin: 0;
+	
+	background-image: url(/img/icons/i-swiper-event-prev.png);
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: 1.4rem;
 }
 
 

@@ -18,7 +18,7 @@
         <meta content="курорт, белокуриха" name="keywords" />
 
         <!-- styles -->
-        <!-- <link href="css/swiper.min.css" rel="stylesheet"/>             -->
+        <link href="css/swiper.min.css" rel="stylesheet"/>            
         <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"> -->
 
         <link href="css/main.css" rel="stylesheet"/>        <!-- gulp -->
@@ -151,10 +151,12 @@
                                 <span class="press-section__rubric_articles">Статьи</span>
                             </div>
                             <div class="articles-lead">
-                                <div class="articles-lead__img"></div>
-                                <p class="articles-lead__heading">АО "Курорт Белокуриха" отмечает сегодня 25 лет своей деятельности</p>
-                                <p class="articles-lead__short">Мы верим в будущее нашего любимого курорта, и рады, что вы помогаете нам творить его </p>
-                                <span class="articles-lead__date">13.04.2018</span>
+                                <div class="articles-lead__img" style="background-image: url(img/bg/articles-lead.jpg);"></div>
+                                <div class="articles-lead__text">
+                                    <p class="articles-lead__heading">АО "Курорт Белокуриха" отмечает сегодня 25 лет своей деятельности</p>
+                                    <p class="articles-lead__short">Мы верим в будущее нашего любимого курорта, и рады, что вы помогаете нам творить его </p>
+                                    <span class="articles-lead__date">13.04.2018</span>
+                                </div>
                             </div>
 
                             <ul class="articles-list">
@@ -186,10 +188,10 @@
                             <div class="press-section__rubric">
                                 <span class="press-section__rubric_blog">Блог</span>
                             </div>
-                            <div class="blog-lead">
+                            <div class="blog-lead" style="background-image: url(img/bg/blog-lead.png);">
                                 <div class="blog-lead__text">
                                     <span class="blog-lead__heading">
-                                        Шестой фестиваль напитков «АлтайФест-2018» пройдет 15 и 16 июня в Алтайском крае
+                                        Много вкусных бургеров в белокурихе
                                     </span>
                                     <span class="blog-lead__date">12.03.2018</span>
                                 </div>
@@ -220,7 +222,29 @@
 
                         <!-- events -->
                         <div class="press-section press-section_events">
-                            <p>slider here</p>
+                              <!-- Swiper -->
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide event" style="background-image: url(img/bg/events.jpg);">
+                                    <span class="event__date"><b class="event__date_day">21</b>/04</span>
+                                    <br/>
+                                    <span class="event__name">Лев Шапиро с программой "под гитару для души"</span>
+                                </div>
+                                <div class="swiper-slide event" style="background-image: url(img/bg/events.jpg);">
+                                    <span class="event__date"><b class="event__date_day">28</b>/04</span>
+                                    <br/>
+                                    <span class="event__name">Филлип Киркоров с программой "я"</span>
+                                </div>
+                                <div class="swiper-slide event" style="background-image: url(img/bg/events.jpg);">
+                                    <span class="event__date"><b class="event__date_day">04</b>/05</span>
+                                    <br/>
+                                    <span class="event__name">Петр Дранга и его живая гармонь</span>
+                                </div>
+                            </div>
+                            <!-- Add Arrows -->
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
                         </div>
                         <!-- events end -->
 
@@ -229,8 +253,8 @@
                         <!-- events -->
                         <div class="press-section press-section_subscribe">
                             <div class="subscribe">
-                                <p class="subscribe__heading">Будьте в курсе всех новостей</p>
-                                <form action="">
+                                <p class="subscribe__heading">Будьте в курсе <br/>всех новостей!</p>
+                                <form id="subscribe__form" action="">
                                     <input type="text" placeholder="ivanov@mail.ru">
                                     <input type="submit" value=">">
                                 </form>
@@ -387,7 +411,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
          <!-- <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
         <script src="/js/modernizr.custom.62035.js" type="text/javascript"></script>
-        <!-- <script src="js/swiper.min.js"></script> -->
+        <script src="js/swiper.min.js"></script>
         <!-- <script src="/js/jquery.nice-select.min.js"></script> -->
         <script src="/js/script.js"></script>
 

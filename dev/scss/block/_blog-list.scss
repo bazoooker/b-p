@@ -1,1 +1,9 @@
-.blog-list {}
+.blog-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+	@include flex-row(wrap, flex-start, flex-start);
+
+	width: 100%;
+}

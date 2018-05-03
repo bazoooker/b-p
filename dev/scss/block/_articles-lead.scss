@@ -1,1 +1,35 @@
-.articles-lead {}
+.articles-lead {
+	flex: 1 1 40%;
+	margin-right: $gutter;
+
+}
+
+.articles-lead__img {
+	min-height: 19rem;
+
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+}
+
+.articles-lead__text {
+	padding: 2.6rem 2.3rem;
+	background-color: #f5f5f5;
+}                                    
+
+.articles-lead__heading {
+	margin: 0 0 1.5rem 0;
+	font-size: 1.4rem;
+	font-weight: 600;
+	color: $color_blue-d;
+	text-transform: uppercase;
+}
+.articles-lead__short {
+	font-size: 1.3rem;
+	margin: 0 0 1.5rem 0;
+}
+.articles-lead__date {
+	font-size: 1rem;
+    color: #515151;
+    opacity: .5;
+}

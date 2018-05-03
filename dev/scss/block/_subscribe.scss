@@ -1,5 +1,41 @@
 .subscribe {
-	background-color: lightgray;
+	background-color: #efefef;
 	flex: 1 1 40%;
+	padding: 2.1rem;
 	margin-right: $gutter;
+}
+
+.subscribe__heading {
+	color: $color_blue-l;
+	text-transform: uppercase;
+	text-align: center;
+	font-weight: 600;
+	margin: 0 0 2rem 0;
+}
+
+#subscribe__form {
+	position: relative;
+	height: 3.5rem;
+
+	input[type="submit"] {
+		position: absolute;
+	    right: 4px;
+	    top: 4px;
+	    width: 3rem;
+	    height: 2.8rem;
+	    border: 0;
+	    color: #fff;
+	    font-weight: 900;
+	    background-color: #76b7dd;
+	}
+
+	input[type="text"] {
+		border: 0;
+		padding: 1rem 1rem 1rem 4rem;
+
+		background-image: url(/img/icons/i-subscribe.png);
+		background-size: 2rem;
+		background-repeat: no-repeat;
+		background-position: 10px 50%;
+	}
 }

@@ -72,6 +72,17 @@
 	margin: 0 2rem 0 3.5rem;
 }
 
+.icon_inst {
+	width: 4rem;
+	height: 4rem;
+
+	background-image: url(/img/icons/i-insta.png);
+	background-repeat: no-repeat;
+	background-size: 3.9rem;
+	background-position: 50% 50%;
+	margin: 0 auto;
+}
+
 
 @media screen and (max-width: 1024px) {
 	.page-header__nav .logo_header,

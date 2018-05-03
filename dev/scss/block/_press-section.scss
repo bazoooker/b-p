@@ -6,29 +6,33 @@
 
 // sections
 .press-section_news {
-	
 	flex: 1 1 100%;
 }
 .press-section_articles {
-	background-color: lightgray;
+	// background-color: lightgray;
 	flex: 1 1 40%;
 	margin-right: $gutter;
+
+	@include flex-row(wrap, space-between, stretch);
 }
 .press-section_blog {
-	background-color: lightgray;
+	// background-color: lightgray;
 	flex: 1 1 40%;
 	margin-right: 0;
 }
 
 .press-section_events {
-	background-color: lightgray;
+	background-color: #efefef;
 	flex: 1 1 40%;
 	margin-right: $gutter;
+	height: 12.8rem;
+	overflow: hidden;
 }
 
 .press-section_subscribe {
 	flex: 1 1 40%;
 	margin-right: 0;
+	height: 12.8rem;
 
 	@include flex-row(nowrap, space-between, flex-start);
 }
