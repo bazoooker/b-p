@@ -1,0 +1,15 @@
+.block-sidebar {
+	width: 100%;
+	@include flex-row(nowrap, justify-content, flex-start);
+
+	h2:first-child {
+		margin-top: 0;
+	}
+}
+.block-sidebar__block {
+	flex: 1 0 65%;
+	margin-right: $gutter;
+}
+.block-sidebar__sidebar {
+	flex: 1 0 25%;
+}

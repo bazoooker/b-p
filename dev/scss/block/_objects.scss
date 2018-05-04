@@ -1,5 +1,5 @@
 .objects {
-	padding: $gutter;
+	padding: $gutter $gutter 0 $gutter;
 	background-color: #fff;
 }
 
@@ -27,6 +27,8 @@
 			font-size: 1.4rem;
 			font-weight: 500;
 			color: $color_blue-d;
+
+			transition: 300ms;
 
 			&.active {
 				background-color: $color_green-l;

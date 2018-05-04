@@ -1,6 +1,9 @@
 .blog-lead {
 	flex: 1 1 100%;
 	min-height: 19rem;
+	display: block;
+	cursor: pointer;
+	text-decoration: none;
 
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -9,6 +12,8 @@
 	@include flex-row(nowrap, space-between, flex-end);
 
 	margin-bottom: 1.5rem;
+
+
 }
 
 .blog-lead__text {

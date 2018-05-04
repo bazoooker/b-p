@@ -1,7 +1,16 @@
 .articles-lead {
 	flex: 1 1 40%;
 	margin-right: $gutter;
+	
+	display: block;
+	text-decoration: none;
+	cursor: pointer;
 
+	&:hover {
+		.articles-lead__heading {
+			text-decoration: underline;
+		}
+	}
 }
 
 .articles-lead__img {

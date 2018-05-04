@@ -1,9 +1,16 @@
 .blog-link {
 	flex: 1 1 40%;
 	margin-right: $gutter;
+	display: block;
+	cursor: pointer;
+	text-decoration: none;
 
 	&:nth-child(even) {
 		margin-right: 0;
+	}
+
+	&:hover {
+		text-decoration: underline;
 	}
 }
 

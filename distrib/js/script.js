@@ -5,12 +5,31 @@
 
 
 $(document).ready(function(){ 
+
+    // events slider on main page
     var swiperEvents = new Swiper('.swiper-container', {
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
       },
     });
+
+    // slider on object page
+    var swiperObjects = new Swiper('.swiper-container-objects');
+
+        // slide on thumbnails
+        $('.js-object-slide').click(function() {
+            var thumbIndex = $(this).index();
+            swiperObjects.slideTo(thumbIndex, 300);
+        });
+
+
+    $('.objects__filter-links li a').click(function(e) {
+        e.preventDefault();
+        $('.objects__filter-links li a').removeClass('active');
+        $(this).addClass('active');
+    })
+
 });
 
 
@@ -204,9 +223,12 @@ $(document).ready(function () {
             $(this).parent().addClass('opened');
             $(this).parent().children('.js-accordeon__content').slideDown(300);
         }
-    });
-})
-    
+    })
+
+
+});
+
+
 
 
 

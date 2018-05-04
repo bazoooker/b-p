@@ -1,0 +1,52 @@
+.object-sidebar {
+
+	p {
+		margin: 0 0 $gutter 0;
+	}
+}
+
+
+
+.object-sidebar__place {
+	margin: 0 0 1.5rem 0;
+
+	span {
+		display: table-cell;
+		vertical-align: middle;
+		text-align: center;
+		color: #fff;
+		background-color: $color_blue-l;
+		width: 15rem;
+		height: 3rem;
+	}
+
+
+}
+
+.object-sidebar__worktime {
+	margin: 0 0 1.5rem 0;
+
+	span {
+		display: table-cell;
+		vertical-align: middle;
+		text-align: center;
+		color: #fff;
+		background-color: $color_blue-d;
+		width: 15rem;
+		height: 3rem;
+	}
+}
+
+.object-sidebar__price {
+	margin: 0 0 1.5rem 0;
+
+	span {
+		display: table-cell;
+		vertical-align: middle;
+		text-align: center;
+		color: #fff;
+		background-color: $color_green-l;
+		width: 15rem;
+		height: 3rem;
+	}
+}

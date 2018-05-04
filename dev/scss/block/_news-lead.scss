@@ -1,15 +1,17 @@
 .news-lead {
-	background-color: lightgray;
 	flex: 1 1 40%;
+	display: block;
 	margin-right: $gutter;
+	min-height: 28rem;
 
 	@include flex-row(nowrap, space-between, flex-end);
 
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
-
-	min-height: 28rem;
+	
+	text-decoration: none;
+	cursor: pointer;
 }
 
 .news-lead__text {

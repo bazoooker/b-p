@@ -29,15 +29,8 @@
 // helper
 @import "block/helper/helper";
 
-// accordeon
-// @import "block/accordeon/accordeon";
-
 // swiper
 @import "block/swiper/swiper";
-
-
-
-
 
 // page layout
 @import "block/page-header";
@@ -49,6 +42,10 @@
 @import "block/hero";
 @import "block/weather";
 @import "block/cta";
+
+// hero for objects
+@import "block/hero-object";
+@import "block/hero-object-thumbnail";
 
 // navigation
 @import "block/nav-main";
@@ -90,5 +87,14 @@
 @import "block/feedback-list";
 @import "block/feedback-item";
 
+// sidebar
+@import "block/block-sidebar";
+@import "block/object-sidebar";
 
+
+
+
+
+// accordeon
+// @import "block/accordeon/accordeon";
 

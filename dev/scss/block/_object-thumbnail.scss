@@ -1,15 +1,22 @@
 .object-thumbnail {
 	position: relative;
-	flex: 1 1 22%;
+	flex: 0 1 22.99%;
 	margin: 0 $gutter $gutter 0;
 	height: 28.5rem;
 
-	background: lightgray;
+	text-decoration: none;
+	cursor: pointer;
 
 	@include flex-row(nowrap, center, flex-end);
 
 	&:nth-child(4n) {
 		margin-right: 0;
+	}
+
+	&:hover {
+		.object-thumbnail__text {
+			height: 11rem;
+		}
 	}
 }
 
@@ -20,6 +27,8 @@
     overflow: hidden;
     background-color: black;
     background-color: rgba(0, 0, 0, 0.5);
+
+    transition: 300ms;
 }
 
 .object-thumbnail__heading {
@@ -28,6 +37,7 @@
 	text-transform: uppercase;
 	font-weight: 500;
 	margin: 0 0 .4rem 0;
+	text-shadow: -1px 0 1px rgba(0, 0, 0, 0.5);
 }
 
 .object-thumbnail__short {
@@ -36,6 +46,7 @@
 	font-size: 1.2rem;
 	font-weight: 400;
 	margin-top: 0;
+	text-shadow: -1px 0 1px rgba(0, 0, 0, 0.5);
 }
 
 

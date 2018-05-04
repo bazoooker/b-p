@@ -1,0 +1,21 @@
+.hero-object-thumbnail {
+	flex: 0 1 12rem;
+
+	margin-right: 3rem;
+
+	height: 100%;
+
+	background-position: 50% 50%;
+	background-size: cover;
+	background-repeat: no-repeat;
+
+	border: 2px solid rgb(255,255,255);
+	border: 2px solid rgba(255,255,255,.4);
+
+	cursor: pointer;
+
+	&:last-child {
+		margin-right: 0;
+	}
+
+}

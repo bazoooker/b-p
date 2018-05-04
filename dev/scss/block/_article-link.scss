@@ -1,5 +1,13 @@
 .article-link {
-	
+	display: block;
+	text-decoration: none;
+	cursor: pointer;
+
+	&:hover {
+		.article-link__heading {
+			text-decoration: underline;
+		}
+	}
 }
 
 .article-link__heading {
