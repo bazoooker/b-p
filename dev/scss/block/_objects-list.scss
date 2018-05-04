@@ -1,1 +1,8 @@
-.objects-list {}
+.objects-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+	@include flex-row(wrap, justify-content, flex-start);
+	
+}

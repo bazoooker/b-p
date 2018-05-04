@@ -83,6 +83,33 @@
 	margin: 0 auto;
 }
 
+.icon_location {
+	width: 2.1rem;
+	height: 2.1rem;
+
+	background-image: url(/img/icons/i-location.png);
+	background-repeat: no-repeat;
+	background-size: 1.4rem;
+	background-position: 50% 50%;
+	margin: 0 .8rem 0 1.9rem;	
+}
+
+.icon_type {
+	position: absolute;
+
+	top: 0;
+	right: 0;
+
+	width: 5rem;
+	height: 5rem;
+
+	background: url(/img/icons/i-type_building.png) #266293;
+	background-repeat: no-repeat !important;
+	background-size: 2.8rem !important;
+	background-position: 50% 50% !important;
+	// margin: 0 auto;
+}
+
 
 @media screen and (max-width: 1024px) {
 	.page-header__nav .logo_header,

@@ -1,1 +1,95 @@
-.feedback-item {}
+.feedback-item {
+
+	flex: 1 1 40%;
+	margin-right: $gutter;
+	height: 28rem;
+
+
+
+	&:nth-child(2n) {
+		margin-right: 0;
+	}
+
+	@include flex-row(nowrap, center, stretch);
+
+	&:nth-child(odd) { 
+		.feedback-item__text {background-color: $color_green-l;
+			&:after {
+				border-left: 5.3rem solid transparent; 
+				border-bottom: 1.4rem solid transparent; 
+				border-top: 1.4rem solid $color_green-l; 
+				border-right: 5.3rem solid $color_green-l; 
+				
+			}
+		}
+	}
+	&:nth-child(even) { 
+		.feedback-item__text {background-color: $color_blue-d;
+			&:after {
+				border-left: 5.3rem solid transparent; 
+				border-bottom: 1.4rem solid transparent; 
+				border-top: 1.4rem solid $color_blue-d; 
+				border-right: 5.3rem solid $color_blue-d; 
+				
+			}
+		}
+	}
+
+}
+
+
+
+
+.feedback-item__img {
+	flex: 1 1 50%;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.feedback-item__text {
+	position: relative;
+	flex: 1 1 50%;
+	padding: 1rem 3rem;
+	@include flex-col(nowrap, center, center);
+
+	&:before {
+		@include pseudo;
+		top: 3rem;
+		left: 3rem;
+
+		width: 2rem;
+		height: 2rem;
+
+		background-image: url(/img/icons/quote.png);
+		background-repeat: no-repeat;
+		background-size: 1.6rem;
+	}
+	&:after {
+		@include pseudo;
+		bottom: -2.8rem;
+		right: 3rem;
+
+		width: 1px;
+		height: 1px;		
+	}
+}
+.feedback__heading {
+	margin: 0 0 2.1rem 0;
+	font-size: 1.4rem;
+	line-height: 1.8rem;
+	text-transform: uppercase;
+	color: #fff;
+	font-weight: 500;
+	text-align: center;
+}
+.feedback-item__person {
+	margin: 0 0 1.5rem 0;
+	font-size: 1.4rem;
+	text-align: center;
+	color: #fff;
+}
+.feedback-item__date {
+	margin: 0 0 0 0;
+	color: #fff;
+	opacity: .9;
+	font-size: 1.2rem;
+}

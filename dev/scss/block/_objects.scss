@@ -1,1 +1,50 @@
-.objects {}
+.objects {
+	padding: $gutter;
+	background-color: #fff;
+}
+
+.objects__filter {
+	@include flex-row(nowrap, justify-content, flex-start);
+	width: 100%;
+	margin: 0 0 1.8rem 0;
+}
+
+.objects__filter-links {
+	flex: 1 1 80%;
+	list-style: none;
+	margin: 0 3rem 0 0;
+	padding-left: 0;
+
+	@include flex-row(wrap, flex-start, flex-start);
+
+	li {
+		margin-bottom: .5rem;
+		a {
+			display: block;
+			padding: .7rem 2rem;
+			// background-color: $color_green-l;
+			text-decoration: none;
+			font-size: 1.4rem;
+			font-weight: 500;
+			color: $color_blue-d;
+
+			&.active {
+				background-color: $color_green-l;
+				color: #fff;
+			}
+		}
+	}
+}
+
+.objects__display-mode {
+	flex: 0 0 13.5rem;
+	height: 3rem;
+
+	background-color: $color_green-l;
+
+	@include flex-row(nowrap, justify-content, center);
+
+	span {
+		color: #fff;
+	}
+}
