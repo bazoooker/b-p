@@ -1,0 +1,58 @@
+.nav-full {
+	width: 100%;
+	@include flex-row(wrap, flex-start, stretch);
+
+	list-style: none;
+	margin: 0;
+	padding: 0;
+
+	& > li {
+		flex: 0 0 22%;
+		margin: 0 $gutter 0 0;
+
+		&::last-child {
+			margin-right: 0;
+		}
+	}
+}
+
+.nav-full__rubrika {
+	display: block;
+	position: relative;
+    margin: $gutter 0;
+    color: $color_blue-l;
+    text-align: left;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 600;
+    -webkit-transition: 300ms;
+    -o-transition: 300ms;
+    transition: 300ms;
+
+}
+
+.nav-full__list {
+
+	list-style: none;
+	margin: 0 0 0 -3rem;
+	padding: 0;
+
+	li {
+		margin: 0;
+	}
+
+	a {
+	    position: relative;
+		display: block;
+		padding: 1.3rem 3rem;
+		text-decoration: none;
+		color: #296495;
+		font-size: 1.4rem;
+		text-transform: none;
+		font-weight: 400;
+		overflow: hidden;
+		-webkit-transition: 200ms;
+		-o-transition: 200ms;
+		transition: 200ms;
+	}
+}

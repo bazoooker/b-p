@@ -11,12 +11,35 @@
 }
 
 .btn-menu__burger-bar {
-	width: 100%;
+	width: 2.1rem;
 	height: 3px;
 	margin-bottom: .3rem;
 	background: #fff;
+	transition: 200ms;
+	transform-origin: center, center;
 
 	&:last-child {
 		margin-bottom: 0;
+	}
+}
+
+.btn-menu_active {
+	background-color: $color_blue-l;
+
+	.btn-menu__burger-bar {
+		height: 3px;
+		margin-bottom: .3rem;
+		background: #fff;
+
+		&:first-child {
+			transform: translateY(6px) rotate(45deg);
+		}
+		&:last-child {
+			transform: translateY(-6px) rotate(-45deg);
+		}
+		&:nth-child(2) {
+			transform: translateX(-10px);
+			opacity: 0;
+		}
 	}
 }

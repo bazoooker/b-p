@@ -17,16 +17,53 @@
 }
 
 .nav-main__links {
-	
-	a {
-		margin-right: 5rem;
+	@include flex-row(nowrap, flex-start, center);
+	list-style: none;
+
+	transition: 500ms;
+	& > li {
+
+		position: relative;
+		margin: 0 0rem 0 0;
+		padding: 1.7rem 2.5rem;
 		color: #fff;
 		text-transform: uppercase;
 		text-decoration: none;
 		font-weight: 600;
 
+		transition: 300ms;
+
+		// &:before {
+		// 	@include pseudo;
+		// 	top: 0;
+		// 	bottom: 0;
+		// 	left: 0;
+		// 	right: 0;
+		// 	width: 100%;
+		// 	height: 100%;
+		// 	background-color: #fff;
+		// 	transform: translateY(-120%);
+		// 	opacity: 0;
+		// 	z-index: -1;
+		// 	transition: 200ms;
+		// }
+
 		&:last-child {
 			margin-right: 0;
 		}
+
+		&:hover {
+			background-color: #fff;
+			color: $color_blue-d;
+
+			// &:before {
+			// 	transform: none;
+			// 	opacity: 1;
+			// }
+		}
 	}
+}
+
+.nav-main__links_removed {
+	transform: translateX(250rem)
 }

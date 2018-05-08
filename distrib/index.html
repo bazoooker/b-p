@@ -36,20 +36,61 @@
                 <a href="/" class="logo"></a>
                 <nav class="nav-main">
                     <div class="nav-main__buttons">
-                        <div class="btn-menu">
+                        <div class="btn-menu js-open-menu">
                             <i class="btn-menu__burger-bar"></i>
                             <i class="btn-menu__burger-bar"></i>
                             <i class="btn-menu__burger-bar"></i>
                         </div>
                         <div class="btn-home"></div>
                     </div>
-                    <div class="nav-main__links">
-                        <a href="#">о курорте</a>
-                        <a href="#">пресс-центр</a>
-                        <a href="#">инфраструктура</a>
-                        <a href="#">путевки и цены</a>
-                    </div>                    
+                    <ul class="nav-main__links">
+
+                        <li>
+                            о курорте
+                            <ul class="dropdown-nav">
+                                <li><a href="#">Описание курорта</a></li>
+                                <li><hr class="dropnown-nav__separator"></li>
+                                <li><a href="#">Лечебные факторы </a></li>
+                                <li><a href="#">Лечение по направлениям</a></li>
+                                <li><a href="#">Активный отдых</a></li>
+                                <li><a href="#">Для детей</a></li>
+                                <li><hr class="dropnown-nav__separator"></li>
+                                <li><a href="#">Отзывы о Белокурихе</a></li>
+                            </ul>
+                        </li>
+                        <li href="#">
+                            пресс-центр
+                            <ul class="dropdown-nav">
+                                <li><a href="#">Новости</a></li>
+                                <li><a href="#">Статьи</a></li>
+                                <li><a href="#">Блог </a></li>
+                                <li><a href="#">Афиша мероприятий </a></li>
+                            </ul>
+                        </li>
+                        <li href="#">
+                            инфраструктура
+                            <ul class="dropdown-nav">
+                                <li><a href="#">Сеть санаториев </a></li>
+                                <li><a href="#">Сеть «Ресторанов + кафе» </a></li>
+                                <li><hr class="dropnown-nav__separator"></li>
+                                <li><a href="#">Медицинская база </a></li>
+                                <li><a href="#">Белокуриха 2</a></li>
+                                <li><a href="#">Места отдыха</a></li>
+                                <li><a href="#">Конгресс-услуги</a></li>
+                                <li><a href="#">Производственный комплекс </a></li>
+                            </ul>
+                        </li>
+                        <li href="#">
+                            путевки и цены
+                            <ul class="dropdown-nav">
+                                <li><a href="#">Санаторно-курортная путевка</a></li>
+                                <li><a href="#">Оздоровительная путевка</a></li>
+                                <li><a href="#">Путевка "Отдых"</a></li>
+                            </ul>
+                        </li>
+                    </ul>                    
                 </nav>
+                
                 <div class="weather">
                     <i class="icon icon_sun"></i><span>ясно, +15</span>
                 </div>
@@ -444,20 +485,205 @@
         PAGE CONTENT END --> 
 
         <footer class="page-footer">
-            <p>page footer</p>
+            <div class="container">
+
+                <div class="nav-full">
+                    <li>
+                            <span class="nav-full__rubrika">о курорте</span>
+                            <ul class="nav-full__list">
+                                <li><a href="#">Описание курорта</a></li>
+                                <li><hr class="dropnown-nav__separator"></li>
+                                <li><a href="#">Лечебные факторы </a></li>
+                                <li><a href="#">Лечение по направлениям</a></li>
+                                <li><a href="#">Активный отдых</a></li>
+                                <li><a href="#">Для детей</a></li>
+                                <li><hr class="dropnown-nav__separator"></li>
+                                <li><a href="#">Отзывы о Белокурихе</a></li>
+                            </ul>
+                        </li>
+                        <li href="#">
+                           <span class="nav-full__rubrika"> пресс-центр</span>
+                            <ul class="nav-full__list">
+                                <li><a href="#">Новости</a></li>
+                                <li><a href="#">Статьи</a></li>
+                                <li><a href="#">Блог </a></li>
+                                <li><a href="#">Афиша мероприятий </a></li>
+                            </ul>
+                        </li>
+                        <li href="#">
+                            <span class="nav-full__rubrika">инфраструктура</span>
+                            <ul class="nav-full__list">
+                                <li><a href="#">Сеть санаториев </a></li>
+                                <li><a href="#">Сеть «Ресторанов + кафе» </a></li>
+                                <li><hr class="dropnown-nav__separator"></li>
+                                <li><a href="#">Медицинская база </a></li>
+                                <li><a href="#">Белокуриха 2</a></li>
+                                <li><a href="#">Места отдыха</a></li>
+                                <li><a href="#">Конгресс-услуги</a></li>
+                                <li><a href="#">Производственный комплекс </a></li>
+                            </ul>
+                        </li>
+                        <li href="#">
+                            <span class="nav-full__rubrika">путевки и цены</span>
+                            <ul class="nav-full__list">
+                                <li><a href="#">Санаторно-курортная путевка</a></li>
+                                <li><a href="#">Оздоровительная путевка</a></li>
+                                <li><a href="#">Путевка "Отдых"</a></li>
+                            </ul>
+                        </li>
+                </div>
+
+
+
+                <div class="nav-full">
+                    <li>
+                            <span class="nav-full__rubrika">о курорте</span>
+                            <ul class="nav-full__list">
+                                <li><a href="#">Описание курорта</a></li>
+                                <li><hr class="dropnown-nav__separator"></li>
+                                <li><a href="#">Лечебные факторы </a></li>
+                                <li><a href="#">Лечение по направлениям</a></li>
+                                <li><a href="#">Активный отдых</a></li>
+                                <li><a href="#">Для детей</a></li>
+                                <li><hr class="dropnown-nav__separator"></li>
+                                <li><a href="#">Отзывы о Белокурихе</a></li>
+                            </ul>
+                        </li>
+                        <li href="#">
+                           <span class="nav-full__rubrika"> пресс-центр</span>
+                            <ul class="nav-full__list">
+                                <li><a href="#">Новости</a></li>
+                                <li><a href="#">Статьи</a></li>
+                                <li><a href="#">Блог </a></li>
+                                <li><a href="#">Афиша мероприятий </a></li>
+                            </ul>
+                        </li>
+                        <li href="#">
+                            <span class="nav-full__rubrika">инфраструктура</span>
+                            <ul class="nav-full__list">
+                                <li><a href="#">Сеть санаториев </a></li>
+                                <li><a href="#">Сеть «Ресторанов + кафе» </a></li>
+                                <li><hr class="dropnown-nav__separator"></li>
+                                <li><a href="#">Медицинская база </a></li>
+                                <li><a href="#">Белокуриха 2</a></li>
+                                <li><a href="#">Места отдыха</a></li>
+                                <li><a href="#">Конгресс-услуги</a></li>
+                                <li><a href="#">Производственный комплекс </a></li>
+                            </ul>
+                        </li>
+ 
+                </div>
+
+            </div>
         </footer>
 
 
 
 
 
-        <div class="menu"></div>
+        <div class="menu">
+            <div class="container">
+
+                <div class="nav-full">
+                    <li>
+                            <span class="nav-full__rubrika">о курорте</span>
+                            <ul class="nav-full__list">
+                                <li><a href="#">Описание курорта</a></li>
+                                <li><hr class="dropnown-nav__separator"></li>
+                                <li><a href="#">Лечебные факторы </a></li>
+                                <li><a href="#">Лечение по направлениям</a></li>
+                                <li><a href="#">Активный отдых</a></li>
+                                <li><a href="#">Для детей</a></li>
+                                <li><hr class="dropnown-nav__separator"></li>
+                                <li><a href="#">Отзывы о Белокурихе</a></li>
+                            </ul>
+                        </li>
+                        <li href="#">
+                           <span class="nav-full__rubrika"> пресс-центр</span>
+                            <ul class="nav-full__list">
+                                <li><a href="#">Новости</a></li>
+                                <li><a href="#">Статьи</a></li>
+                                <li><a href="#">Блог </a></li>
+                                <li><a href="#">Афиша мероприятий </a></li>
+                            </ul>
+                        </li>
+                        <li href="#">
+                            <span class="nav-full__rubrika">инфраструктура</span>
+                            <ul class="nav-full__list">
+                                <li><a href="#">Сеть санаториев </a></li>
+                                <li><a href="#">Сеть «Ресторанов + кафе» </a></li>
+                                <li><hr class="dropnown-nav__separator"></li>
+                                <li><a href="#">Медицинская база </a></li>
+                                <li><a href="#">Белокуриха 2</a></li>
+                                <li><a href="#">Места отдыха</a></li>
+                                <li><a href="#">Конгресс-услуги</a></li>
+                                <li><a href="#">Производственный комплекс </a></li>
+                            </ul>
+                        </li>
+                        <li href="#">
+                            <span class="nav-full__rubrika">путевки и цены</span>
+                            <ul class="nav-full__list">
+                                <li><a href="#">Санаторно-курортная путевка</a></li>
+                                <li><a href="#">Оздоровительная путевка</a></li>
+                                <li><a href="#">Путевка "Отдых"</a></li>
+                            </ul>
+                        </li>
+                </div>
+
+
+
+                <div class="nav-full">
+                    <li>
+                            <span class="nav-full__rubrika">о курорте</span>
+                            <ul class="nav-full__list">
+                                <li><a href="#">Описание курорта</a></li>
+                                <li><hr class="dropnown-nav__separator"></li>
+                                <li><a href="#">Лечебные факторы </a></li>
+                                <li><a href="#">Лечение по направлениям</a></li>
+                                <li><a href="#">Активный отдых</a></li>
+                                <li><a href="#">Для детей</a></li>
+                                <li><hr class="dropnown-nav__separator"></li>
+                                <li><a href="#">Отзывы о Белокурихе</a></li>
+                            </ul>
+                        </li>
+                        <li href="#">
+                           <span class="nav-full__rubrika"> пресс-центр</span>
+                            <ul class="nav-full__list">
+                                <li><a href="#">Новости</a></li>
+                                <li><a href="#">Статьи</a></li>
+                                <li><a href="#">Блог </a></li>
+                                <li><a href="#">Афиша мероприятий </a></li>
+                            </ul>
+                        </li>
+                        <li href="#">
+                            <span class="nav-full__rubrika">инфраструктура</span>
+                            <ul class="nav-full__list">
+                                <li><a href="#">Сеть санаториев </a></li>
+                                <li><a href="#">Сеть «Ресторанов + кафе» </a></li>
+                                <li><hr class="dropnown-nav__separator"></li>
+                                <li><a href="#">Медицинская база </a></li>
+                                <li><a href="#">Белокуриха 2</a></li>
+                                <li><a href="#">Места отдыха</a></li>
+                                <li><a href="#">Конгресс-услуги</a></li>
+                                <li><a href="#">Производственный комплекс </a></li>
+                            </ul>
+                        </li>
+ 
+                </div>
+
+            </div>
+        </div>
+
+
         <div class="overlay js-overlay"></div>
+
+
             
         <!-- MODAL WINDOW 
         ======================-->
         <div id="overlay" style="display: none;">
         </div>
+
         <div class="modal" id="callback-window" style="display: none;">
             <a class="modal-close" href="#">
             </a>

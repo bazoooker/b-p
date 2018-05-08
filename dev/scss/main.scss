@@ -38,6 +38,17 @@
 @import "block/page-wrapper";
 @import "block/page-content";
 
+// menu
+@import "block/menu";
+@import "block/dropdown-nav";
+
+// navigation
+@import "block/nav-main";
+@import "block/nav-full";
+
+// modal
+@import "block/modal/overlay";
+
 // hero
 @import "block/hero";
 @import "block/weather";
@@ -47,8 +58,6 @@
 @import "block/hero-object";
 @import "block/hero-object-thumbnail";
 
-// navigation
-@import "block/nav-main";
 
 // press
 @import "block/press-center";
