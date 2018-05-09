@@ -23,7 +23,7 @@ $(document).ready(function(){
             swiperObjects.slideTo(thumbIndex, 300);
         });
 
-
+    // filter objects
     $('.objects__filter-links li a').click(function(e) {
         e.preventDefault();
         $('.objects__filter-links li a').removeClass('active');
@@ -206,12 +206,13 @@ $(".modal form").on('submit', function(e){
 
 
 
-// ACCORDEON
-// =================================
+
 
 $(document).ready(function () {
-    // $('.js-accordeon .js-accordeon__content').slideUp(0);
-    
+
+    // ACCORDEON
+
+    // $('.js-accordeon .js-accordeon__content').slideUp(0);    
     $('.js-accordeon .js-accordeon__label').click(function() {
 
         // подсвечиваем открытый аккордеон
@@ -227,7 +228,7 @@ $(document).ready(function () {
 
 
 
-    // dropdown
+    // DROPDOWN
     $('.nav-main__links > li').hover(function() {
         console.log('hover');
         $(this).find('.dropdown-nav').fadeIn(200);
@@ -238,8 +239,28 @@ $(document).ready(function () {
     });
 
 
+    // STICKY HEADER
+    
+
 });
 
+// STICKY HEADER
+
+
+function showStickyHeader() {
+    // var heroHeight = $('.hero').height();
+    // console.log(heroHeight);
+
+    if ( window.pageYOffset > 0 ) {
+        console.log('more than 700')
+       $('.page-header').addClass('page-header_sticky');
+    }
+    else {
+        console.log('less than 700')
+        $('.page-header').removeClass('page-header_sticky');   
+    }
+}    
+    
 
 
 
@@ -275,7 +296,8 @@ function openMenu() {
 $(document).ready(function() {   
     $('.js-open-menu').click(openMenu);
     $('.js-menu-close').click(openMenu);
-    $('.js-overlay').click(openMenu);    
+    $('.js-overlay').click(openMenu);
+    window.onscroll = function() {showStickyHeader()};    
 });
 
 // close on "esc"

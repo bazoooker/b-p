@@ -9,13 +9,29 @@
 		left: 0;
 		right: 0;
 		height: 5rem;
-		background-color: rgb(255,255,255);
-		background-color: rgba(255,255,255,.3);
+		// background-color: rgb(255,255,255);
+		// background-color: rgba(255,255,255,.3);
+
+		background-color: #4ba1d2;
+		opacity: .9;
 
 	}
 
 	.container {
 		position: relative;
 		@include flex-row(nowrap, space-between, flex-start);
+	}
+}
+
+
+.page-header_sticky {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+
+	.logo {
+		width: 8rem;
+		height: 5rem;
 	}
 }
