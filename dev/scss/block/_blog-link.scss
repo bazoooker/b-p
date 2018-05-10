@@ -10,7 +10,9 @@
 	}
 
 	&:hover {
-		text-decoration: underline;
+		.blog-link__heading {
+			text-decoration: underline;
+		}
 	}
 }
 
@@ -25,4 +27,13 @@
 	font-size: 1rem;
     color: #515151;
     opacity: .5;
+}
+
+
+
+
+@media screen and (max-width: 567px) {
+	.blog-link {
+		flex: 1 1 100%;
+	}
 }

@@ -3,4 +3,29 @@
 	background-color: #36975b;
 	padding: 5rem 0;
 	width: 100%;
+
+	.nav-full {
+		color: #fff;
+	}
+
+	.nav-full__rubrika {
+		color: #fff;
+
+	}
+
+	.nav-full__list {
+
+		color: #fff;
+
+		li {
+			color: #fff;
+		}
+
+		a {
+		    color: #fff;
+		    &:hover {
+		    	background-color: lighten($color_green-d, 5%);
+		    }
+		}
+	}
 }

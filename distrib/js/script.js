@@ -238,9 +238,36 @@ $(document).ready(function () {
         $('.dropdown-nav').fadeOut(200);
     });
 
+    // WOW
+    new WOW().init();
 
-    // STICKY HEADER
-    
+    // MENU ACCORDEONS
+    $('.nav-full > li .nav-full__rubrika').click(function() {
+
+
+        var curAccord = $(this).parent().find( $('.nav-full__list'));
+
+        if (curAccord.hasClass('nav-full__list_opened')) {
+            curAccord.slideUp(300);
+            curAccord.removeClass('nav-full__list_opened');
+            console.log('hide acc');
+        }
+        else {
+            curAccord.slideDown(300);
+            curAccord.addClass('nav-full__list_opened');
+            console.log('show acc');
+        }
+
+        // подсвечиваем открытый аккордеон
+        // if ( $(this).parent().hasClass('opened') ) {
+        //     $(this).parent().removeClass('opened');
+        //     $(this).parent().children('.js-accordeon__content').slideUp(300);
+        // }
+        // else {
+        //     $(this).parent().addClass('opened');
+        //     $(this).parent().children('.js-accordeon__content').slideDown(300);
+        // }
+    });
 
 });
 
@@ -279,6 +306,7 @@ function openMenu() {
         $('.page-wrapper').removeClass('h-no-scroll');
         $('.js-open-menu').removeClass('btn-menu_active');
         $('.nav-main__links').removeClass('nav-main__links_removed');
+        // $('.page-header').removeClass('page-header_sticky');
         menuIsOpen = false;
     }
     else {
@@ -287,6 +315,7 @@ function openMenu() {
         $('.page-wrapper').addClass('h-no-scroll');
         $('.js-open-menu').addClass('btn-menu_active');
         $('.nav-main__links').addClass('nav-main__links_removed');
+        // $('.page-header').addClass('page-header_sticky');
         // slideMenuList();
         menuIsOpen = true;
     }

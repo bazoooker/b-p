@@ -4,12 +4,15 @@
 	top: 5rem;
 	left: 0;
 	right: 0;
-
+	
+	height: 100%;
 	min-height: 100vh;
 
 	background-color: #fff;
 	color: #fff;
 	padding-bottom: 5rem;
+	overflow-y: auto;
+
 
 	// z-index: 10;
 

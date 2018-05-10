@@ -5,9 +5,18 @@
 	height: 5rem;
 	padding: 1.5rem 1.7rem;
 	background-color: rgba(255,255,255, .4);
+	transition: 200ms;
 
 
 	cursor: pointer;
+
+	&:hover {
+		background-color: #fff;
+
+		.btn-menu__burger-bar {
+			background: $color-blue-l;
+		}
+	}
 }
 
 .btn-menu__burger-bar {
@@ -25,7 +34,7 @@
 
 .btn-menu_active {
 	// background-color: $color_blue-l;
-	background-color: #f9cccc;
+	// background-color: #f9cccc;
 
 	.btn-menu__burger-bar {
 		height: 3px;

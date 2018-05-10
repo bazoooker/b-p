@@ -1,7 +1,7 @@
 .btn-specials {
 	@include flex-row(nowrap, flex-start, center);
 	background:$color_green-l;
-	width: 29rem;
+	width: 28rem;
 	height: 6.6rem;
 	cursor: pointer;
 	text-decoration: none;

@@ -8,8 +8,8 @@
 	background-position: 50% 50%;
 
 	transition: 200ms;
-	background-image: url(/img/logo.jpg); 
-	background-size: cover;
+	background-image: url(/img/logo-vert.svg); 
+	background-size: 30rem;
 
 	// &:hover {
 	// 	opacity: .75;
@@ -111,51 +111,21 @@
 }
 
 
-@media screen and (max-width: 1024px) {
-	.page-header__nav .logo_header,
-	.logo_header {
-		font-size: 2rem;
-		line-height: 2rem;
-	}
-}
 
 @media screen and (max-width: 667px) {
-	.logo_header {
-		height: 45%;
-	    background-size: contain;
-	    background-position: 0 50%;
+	.page-header {
+		.logo {
+		    width: 8rem;
+    		height: 5rem;
+    		background-size: 11rem;
+    		background-position: 50% 10%;
+		}
 	}
 
-	// .logo_menu {
-	// 	height: 8rem;
-	// 	background-size: contain;
-	// 	background-position: 50% 50%;
-	// 	margin-bottom: 4rem;
-	// }
-	.logo_footer {
-		margin-bottom: 6rem;
-	}
+	.icon_sun {
+		width: 1.8rem;
+		height: 1.8rem;
+		background-size: 1.8rem;
+		margin: 0 1rem 0 1.5rem;
+	}	
 }
-
-@media screen and (max-width: 667px) {
-	.logo_footer {
-		text-align: center;
-	}
-}
-
-@media screen and (max-width: 614px) {
-	.logo_menu {
-		background-position: 50% 50%;
-		height: 11rem;
-	}
-	.page-header__nav .logo_header,
-	.logo_header {
-		font-size: 1.8rem;
-		line-height: 1.8rem;
-	}
-	.logo_menu,
-	.logo_footer {
-		text-align: center;
-	}
-}
-

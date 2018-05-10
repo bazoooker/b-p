@@ -4,10 +4,21 @@
 	height: 5rem;
 	margin-right: auto;
 
-	background-image: url(/img/icons/i-home.png);
+	background: url(/img/icons/i-home.png) transparent;
 	background-size: 2.3rem;
 	background-position: 50% 50%;
 	background-repeat: no-repeat;
+	transition: 200ms;
 
 	cursor: pointer;
+
+	&:hover {
+		background-color: lighten($color-blue-l, 5%);
+	}
+}
+
+@media screen and (max-width: 667px) {
+	.btn-home {
+		display: none;
+	}
 }

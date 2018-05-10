@@ -1,6 +1,7 @@
 .blog-lead {
 	flex: 1 1 100%;
 	min-height: 19rem;
+	position: relative;
 	display: block;
 	cursor: pointer;
 	text-decoration: none;
@@ -9,11 +10,47 @@
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
 
+	overflow: hidden;
+
 	@include flex-row(nowrap, space-between, flex-end);
 
 	margin-bottom: 1.5rem;
 
+	&:hover {
+		.blog-lead__img {
+			transform: scale(1.1);
 
+			&:after {		    	
+		    	opacity: .2;
+		    }
+		}
+	}
+
+
+}
+
+.blog-lead__img {
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    transition: 400ms;
+
+    &:after {
+    	@include pseudo;
+    	width: 100%;
+    	height: 100%;
+
+    	top: 0;
+    	bottom: 0;
+    	left: 0;
+    	right: 0;
+
+    	transition: 300ms;
+    	background-color: $color_blue-l;
+    	opacity: 0;
+    }
 }
 
 .blog-lead__text {

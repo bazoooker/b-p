@@ -1,7 +1,7 @@
 .page-header {
 
 	color: #fff;
-	z-index: 2;
+	z-index: 9;
 
 	&:before {
 		@include pseudo;
@@ -31,7 +31,25 @@
 	right: 0;
 
 	.logo {
-		width: 8rem;
-		height: 5rem;
+		// width: 21rem;
+    	// height: 5rem;
+    	// background-image: url(/img/logo-horiz.svg);
+    	width: 8rem;
+    	height: 5rem;
+    	// background-size: cover;
+
+	    background-size: 11rem;
+    	background-position: 50% 10%;
+
+	}
+}
+
+
+
+@media screen and (max-width: 1230px) {
+	.nav-main {
+		.nav-main__links {
+			display: none;
+		}
 	}
 }

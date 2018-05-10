@@ -24,7 +24,7 @@
 .press-section_events {
 	background-color: #efefef;
 	flex: 1 1 40%;
-	margin-right: $gutter;
+	margin: 0 $gutter 0 0;
 	height: 12.8rem;
 	overflow: hidden;
 }
@@ -61,4 +61,59 @@
 }
 .press-section__rubric_blog {
 	background-color: $color_blue-l;
+}
+
+@media screen and (max-width: 1280px) {
+	.press-section_events {
+		flex: 1 1 30%;
+		margin: 0 $gutter 0 0;
+	}
+	.press-section_subscribe {
+		flex: 1 1 60%;
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	.press-section_events {
+		flex: 1 1 100%;
+		margin: 0 0 $gutter 0;
+		height: 22rem;
+	}
+	.press-section_subscribe {
+		flex: 1 1 60%;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.press-section_articles {
+		flex: 1 1 100%;
+		margin: 0 0 $gutter 0;
+		margin-rigth: 0;
+	}
+	.press-section_blog {
+		flex: 1 1 100%;
+		margin: 0 0 $gutter 0;
+	}
+	.press-section_events {
+		margin-right: 0;
+	}
+}
+
+@media screen and (max-width: 567px) {
+	.news-item__img {
+		display: none;
+	}
+
+	.press-section_subscribe {
+		flex: 1 1 100%;
+		margin: 0 0 $gutter 0;
+		height: 28.8rem;
+
+
+		@include flex-row(wrap, space-between, flex-start);
+	}
+
+	.press-section_events {
+		display: none;
+	}
 }

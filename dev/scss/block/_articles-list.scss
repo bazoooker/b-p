@@ -5,3 +5,11 @@
 
 	list-style: none;
 }
+
+
+@media screen and (max-width: 567px) {
+	.articles-list {
+		flex: 1 1 100%;
+		margin: 0 0 0 0;
+	}
+}

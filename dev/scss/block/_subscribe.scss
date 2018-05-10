@@ -2,7 +2,8 @@
 	background-color: #efefef;
 	flex: 1 1 40%;
 	padding: 2.1rem;
-	margin-right: $gutter;
+	margin: 0 $gutter 0 0;
+	height: 12.9rem;
 }
 
 .subscribe__heading {
@@ -16,6 +17,7 @@
 #subscribe__form {
 	position: relative;
 	height: 3.5rem;
+
 
 	input[type="submit"] {
 		position: absolute;
@@ -33,9 +35,18 @@
 		border: 0;
 		padding: 1rem 1rem 1rem 4rem;
 
+		width: 100%;
+
 		background-image: url(/img/icons/i-subscribe.png);
 		background-size: 2rem;
 		background-repeat: no-repeat;
 		background-position: 10px 50%;
+	}
+}
+
+@media screen and (max-width: 567px) {
+	.subscribe {
+		flex: 1 1 100%;
+		margin: 0 0 $gutter 0;
 	}
 }

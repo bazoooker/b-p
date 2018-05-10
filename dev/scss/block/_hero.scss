@@ -52,3 +52,51 @@
 		font-weight: 500;
 	}
 }
+
+@media screen and (max-width: 1100px) {
+	.hero {
+		height: 90rem;
+
+		h1 {
+			text-align: center;
+			padding: 7.5rem 0 7.5rem 0;
+		}
+
+		.container {
+			@include flex-row(wrap, space-between, stretch);
+		}
+	}
+
+	.hero__offer {
+		flex: 1 1 100%;
+		margin-bottom: $gutter;
+	}
+	.hero__cta {
+		flex: 1 1 100%;
+	}
+	.hero__num-col {
+		width: 33.3%;
+		margin-right: 0;
+		text-align: center;
+	}
+}
+
+
+@media screen and (max-width: 568px) {
+	.hero {
+		h1 {
+			font-size: 2.3rem;
+			flex: 1 1 100%;
+		}
+	}
+
+	.hero__offer {
+		@include flex-row(wrap, space-around, flex-start);
+	}
+	.hero__num-col {
+		flex: 1 1 45%;
+
+		p {font-size: 2.8rem;}
+		span { font-size: 1.7rem;}
+	}
+}
