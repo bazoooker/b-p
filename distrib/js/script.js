@@ -281,12 +281,33 @@ function showStickyHeader() {
     if ( window.pageYOffset > 0 ) {
         console.log('more than 700')
        $('.page-header').addClass('page-header_sticky');
+       if ( $(window).width() > 1230 ) {
+           $('.weather').fadeOut(300);
+       }
     }
     else {
         console.log('less than 700')
-        $('.page-header').removeClass('page-header_sticky');   
+        $('.page-header').removeClass('page-header_sticky');
+        $('.weather').show(300);   
     }
-}    
+}
+
+function showToTopButton() {
+    // var heroHeight = $('.hero').height();
+    // console.log(heroHeight);
+
+    if ( window.pageYOffset > 500 ) {
+       $('.to-top').addClass('to-top_visible')
+    }
+    else {
+        $('.to-top').removeClass('to-top_visible')
+    }
+} 
+
+function scrollToTop() {
+  $("html, body").animate({ scrollTop: 0 }, "slow");
+  return false;
+}; 
     
 
 
@@ -326,7 +347,9 @@ $(document).ready(function() {
     $('.js-open-menu').click(openMenu);
     $('.js-menu-close').click(openMenu);
     $('.js-overlay').click(openMenu);
+    $('.js-scroll-to-top').click(scrollToTop);
     window.onscroll = function() {showStickyHeader()};    
+    window.onscroll = function() {showToTopButton()};    
 });
 
 // close on "esc"
@@ -407,3 +430,5 @@ $(document).ready(function() {
 
 // добавить каждому пункту transition-delay
 // js-menu-list-slidein
+
+

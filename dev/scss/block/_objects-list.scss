@@ -2,13 +2,8 @@
 	margin: 0;
 	padding: 0;
 	list-style: none;
+	overflow: hidden;
 
-	@include flex-row(wrap, space-between, flex-start);
+	// @include flex-row(wrap, space-between, flex-start);
 	
-}
-
-@media screen and (max-width: 1341px) {
-	.objects-list {
-		flex: 1 1 30%;
-	}
 }
