@@ -25,9 +25,9 @@ $(document).ready(function(){
 
     // filter objects
     $('.objects__filter-links li a').click(function(e) {
-        e.preventDefault();
-        $('.objects__filter-links li a').removeClass('active');
-        $(this).addClass('active');
+//        e.preventDefault();
+//        $('.objects__filter-links li a').removeClass('active');
+//        $(this).addClass('active');
     })
 
 });
@@ -348,8 +348,8 @@ $(document).ready(function() {
     $('.js-menu-close').click(openMenu);
     $('.js-overlay').click(openMenu);
     $('.js-scroll-to-top').click(scrollToTop);
-    window.onscroll = function() {showStickyHeader()};    
-    window.onscroll = function() {showToTopButton()};    
+    $(window).scroll(showStickyHeader);  
+    $(window).scroll(showToTopButton);    
 });
 
 // close on "esc"
