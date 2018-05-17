@@ -3,17 +3,20 @@
 }
 
 .cta__btn {
+	position: relative;	
+	overflow: hidden;
 	transition: 200ms;
 
-	&:hover {
+	&:first-child:hover {
 		transform: translateX(5px);
 	}
 
 	span {
 		color: #fff;
-		font-size: 1.4rem;
+		font-size: 1.6rem;
 		font-weight: 600;
 		text-transform: uppercase;
+		z-index: 1;	
 	}
 }
 

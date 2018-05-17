@@ -6,7 +6,6 @@
 
 $(document).ready(function(){ 
 
-
     // events slider on main page
     var swiperEvents = new Swiper('.swiper-container', {
       navigation: {
@@ -18,48 +17,11 @@ $(document).ready(function(){
     // slider on object page
     var swiperObjects = new Swiper('.swiper-container-objects');
 
-    // slide on thumbnails
-    $('.js-object-slide').click(function() {
-        var thumbIndex = $(this).index();
-        swiperObjects.slideTo(thumbIndex, 300);
-    });
-
-    // slider on main screen
-    var swiperHero = new Swiper('.swiper-container-hero', {
-        effect: 'slide',
-/*
-        fadeEffect: {
-            crossFade: false
-        },*/
-        autoplay: {
-            delay: 3000,
-        },
-    });
-
-    swiperHero.on('slideChange', function () {
-      console.log('slide changed');
-       // new WOW().init();
-       
-
-
- wows = new WOW(
-  {
-    boxClass:     'wows',      // класс, скрывающий элемент до момента отображения на экране (по умолчанию, wow)
-    animateClass: 'animated', // класс для анимации элемента (по умолчанию, animated)
-    offset:       0,          // расстояние в пикселях от нижнего края браузера до верхней границы элемента, необходимое для начала анимации (по умолчанию, 0)
-    mobile:       true,       // включение/отключение WOW.js на мобильных устройствах (по умолчанию, включено)
-    live:         true,       // поддержка асинхронно загруженных элементов (по умолчанию, включена)
-    callback:     function(box) {
-      // функция срабатывает каждый раз при старте анимации
-      // аргумент box — элемент, для которого была запущена анимация
-    },
-    scrollContainer: null // селектор прокручивающегося контейнера (опционально, по умолчанию, window)
-  }
-).init();
-    });
-
-
-    // var swiperHero = new Swiper('.swiper-container-hero');
+        // slide on thumbnails
+        $('.js-object-slide').click(function() {
+            var thumbIndex = $(this).index();
+            swiperObjects.slideTo(thumbIndex, 300);
+        });
 
     // filter objects
     $('.objects__filter-links li a').click(function(e) {
@@ -72,7 +34,7 @@ $(document).ready(function(){
 
 
 
-    /* МОДАЛЬНЫЕ ОКНА */
+	/* МОДАЛЬНЫЕ ОКНА */
 $(document).ready(function(){        
     $(".callback-link").on('click', function(){
         var btn = $(this);                        
