@@ -9,3 +9,10 @@
 	// убрать на мобилках
 	min-height: 28rem;
 }
+
+
+@media screen and (max-width: 768px) {
+	.news-list {
+		flex: 1 1 100%;
+	}
+}

@@ -1,28 +1,52 @@
 .btn {
+	display: inline-block;
 	position: relative;	
 	overflow: hidden;
 	color: #fff;
-	font-size: 1rem;
+	font-size: 1.9rem;
 	text-transform: uppercase;
 	text-decoration: none;
-	font-weight: 800;
+	font-weight: 600;
+	background-color: $color-green-l;
+	padding: 1rem 3rem;
+
+	&:visited {
+		color: #fff;
+	}
 
 	// transition: 250ms;
 
 	// overflow: hidden;
 
-	&:after {
-		@include pseudo;
+	// &:after {
+	// 	@include pseudo;
 
-		width: 130%;
-		height: 70%;
+	// 	width: 0;
+	// 	height: 100%;
 
-		bottom: 0;
-		left: 0;
+	// 	bottom: 0;
+	// 	left: 0;
 
-		background-color: red;
+	// 	background-color: rgba(0,0,0,.2);
+
+		transition: 300ms;
+	// }
+
+	&:hover {
+		background-color: darken($color-green-l, 5%)
 	}
 }
+
+.btn-input-holder {
+	display: inline-block;
+	cursor: pointer;
+}
+
+input.btn {
+	border: 0;
+	outline: none;
+}
+
 
 .btn_hover-halves {
 	position: relative !important;	
@@ -37,21 +61,115 @@
 		top: 0%;
 		left: 0%;
 		
-		background-color: rgba(0,0,0,.2);
+		background-color: rgba(255,255,255,.2);
 		z-index: 0;	
 		transition: 400ms;
 
-		// transform: translateX(100%);
-		// transition-delay: 100ms;
 		opacity: 0;
 	}
 
 	&:hover {
 		&:before {
 			opacity: 1;
-			width: 100%;			
-			// top: 0%;
-			// left: 0%;
+			width: 100%;	
+		}
+	}
+}
+
+
+.btn_download {
+    display: inline-block;
+    margin: 0 .5rem .5rem 0;
+    position: relative;
+    padding: 1rem;
+    text-decoration: none;
+    padding-left: 0;
+    padding: 2rem;
+    color: $color-green-l;
+    -webkit-transition: 200ms;
+    -o-transition: 200ms;
+	text-decoration: underline;
+
+    &:visited {
+    	color: $color-green-d;
+    }
+	
+	&:after {
+	    position: absolute;
+		content: '';
+		width: 2.5rem;
+		height: 2.5rem;
+		right: -11px;
+		top: 14px;
+		background: url(/img/icons/i-download_black.png) #dbdcdc;
+		opacity: .65;
+		background-position: 50% 50%;
+		background-repeat: no-repeat;
+		background-size: 1.3rem;
+		border-radius: 50%;
+		-webkit-transition: 200ms;
+		-o-transition: 200ms;
+		transition: 200ms;
+		}
+
+	&:hover {
+		text-decoration: none;
+		&:after {
+			// background: url(/img/icons/i-download.png) $color-blue-l;
+			opacity: 1;
+			background-position: 50% 50%;
+	    	background-repeat: no-repeat;
+	    	background-size: 1.3rem;
+		}
+	}
+}
+
+.hover_overlay-left {
+	position: relative;	
+	// overflow: hidden;
+
+	&:after {
+		@include pseudo;
+
+		width: 0%;
+		height: 100%;
+
+		top: 0%;
+		left: 0%;
+		
+		background-color: rgba(255,255,255,.15);
+		z-index: 0;	
+		transition: 300ms;
+	}
+
+	&:hover {
+		&:after {
+			width: 100%;	
+		}
+	}
+}
+
+.hover_overlay-top {
+	position: relative;	
+	// overflow: hidden;
+
+	&:after {
+		@include pseudo;
+
+		width: 100%;
+		height: 0%;
+
+		top: 0%;
+		left: 0%;
+		
+		background-color: rgba(255,255,255,.15);
+		z-index: 0;	
+		transition: 300ms;
+	}
+
+	&:hover {
+		&:after {
+			height: 100%;	
 		}
 	}
 }

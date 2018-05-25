@@ -42,6 +42,17 @@
 	
 /* icon position */
 
+.icon_download {
+	background: url(/img/icons/i-download.png) lighten($color-blue-l, 5%);
+	width: 3rem;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: 1.8rem;
+	margin: 0 2rem 0 0;
+	z-index: 1;	
+}
+
 .icon_calc {
 	background: url(/img/icons/i-calc.png);
 	width: 4rem;
@@ -112,6 +123,11 @@
 	// margin: 0 auto;
 
 	// z-index: 3;
+}
+
+.icon-float {
+	float: left;
+	margin: 0 2rem 0 0;
 }
 
 

@@ -1,3 +1,5 @@
 .feedback-list {
-	@include flex-row(nowrap, justify-content, center);
+	position: relative;
+	// @include flex-row(nowrap, justify-content, center);
+	overflow: hidden;
 }

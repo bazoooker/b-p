@@ -7,6 +7,9 @@
 }
 
 
+
+
+
 .swiper-container-objects {
 	position: absolute;
 	top:0;
@@ -23,11 +26,90 @@
 	}
 }
 
+
+
+
+
+.swiper-container-feedback {
+	width: 100%;
+	.swiper-slide {
+		background-size: cover;
+		background-position: 50% 50%;
+		background-repeat: no-repeat;
+	}
+	.swiper-button-next,
+	.swiper-button-prev {
+		display: none;
+	}
+}
+
+
+
+
+
+
+
+.swiper-container-hero {
+	.swiper-slide {
+		.container {
+			position: relative;
+		}
+	}
+}
+
+
+.swiper-container-diplomas,
+.swiper-container-licenz {
+	overflow: hidden;
+	position: relative;
+	margin-bottom: $gutter;
+
+	.swiper-slide {
+		text-align: center;
+	}
+
+}
+
+.arrow-holder {
+	position: relative;
+	.swiper-button-next,
+	.swiper-button-prev {
+		position: absolute;
+		width: 2.4rem;
+		height: 8rem;
+		border-radius: 50%;
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: 2rem;
+		opacity: .5;
+
+		&:hover {
+			opacity: .8;
+		}
+	}
+	.swiper-button-next{
+		background-image: url(/img/icons/i-arrow-right.png);
+		right: -1.2rem;
+	}
+	.swiper-button-prev{
+		background-image: url(/img/icons/i-arrow-left.png);
+		left: -1.2rem;
+	}
+
+}
+
+
+
+
+
+
 .swiper-controls-holder {
 	position: relative;
 }
 
 .swiper-button-next {
+	top: 50%;
+	transform: translateY(-50%);
 	width: 1.9rem;
 	height: 1.9rem;
 	margin: 0;
@@ -38,6 +120,8 @@
 	background-size: 1.4rem;
 }
 .swiper-button-prev {
+	top: 50%;
+	transform: translateY(-50%);
 	width: 1.9rem;
 	height: 1.9rem;
 	margin: 0;
@@ -151,3 +235,8 @@
 .swiper-button-disabled {opacity: .2 !important;}
 
 
+@media screen and (max-width: 569px) {
+	.arrow-holder {
+		padding: 0 $gutter;
+	}
+}

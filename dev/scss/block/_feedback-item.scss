@@ -1,8 +1,9 @@
 .feedback-item {
 
-	flex: 1 1 40%;
+	// flex: 1 1 40%;
 	margin-right: $gutter;
-	height: 28rem;
+	// height: 31rem;
+	padding-bottom: 3rem;
 
 
 
@@ -10,7 +11,7 @@
 		margin-right: 0;
 	}
 
-	@include flex-row(nowrap, center, stretch);
+	// @include flex-row(nowrap, center, stretch);
 
 	&:nth-child(odd) { 
 		.feedback-item__text {background-color: $color_green-l;
@@ -41,19 +42,23 @@
 
 
 .feedback-item__img {
-	flex: 1 1 50%;
-	background-size: cover;
-	background-repeat: no-repeat;
+	// flex: 1 1 50%;
+	// background-size: cover;
+	// background-repeat: no-repeat;
+    width: 13rem;
+    height: 13rem;
+    margin: 0 auto $gutter auto;
+    border-radius: 50%;
 }
 .feedback-item__text {
 	position: relative;
 	flex: 1 1 50%;
-	padding: 1rem 3rem;
+	padding: 5rem 3rem 3rem 3rem;
 	@include flex-col(nowrap, center, center);
 
 	&:before {
 		@include pseudo;
-		top: 3rem;
+		top: 2rem;
 		left: 3rem;
 
 		width: 2rem;

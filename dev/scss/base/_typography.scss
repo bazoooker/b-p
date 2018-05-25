@@ -4,80 +4,138 @@ html {
     font-weight: 400;
     color: #5e5e5e;
 }
-
 body {
     font-size: 1.4rem;
 }
 h1 {
     font-size: 3.8rem;
+    line-height: 4.3rem;
     font-weight: 600;
     color: $color_blue-d;
+    margin: 0 0 $gutter 0;
+    .subheading {
+        font-size: 2.5rem;
+        font-weight: 500;
+        color: $color_blue-d;
+    }
 }
 h2 {
     font-size: 3.5rem;
     font-weight: 600;
     color: $color_blue-d;
+    margin: 0 0 $gutter 0;
+    .subheading {
+        font-size: 2.2rem;
+        font-weight: 500;
+        color: $color_blue-d;
+    }
 }
-
-h3 { 
+h3 {
     font-size: 2rem;
     color: $color_main-dark;
     font-weight: 300;
- }
-
+    margin: 0 0 $gutter 0;
+}
 section {
     h1:first-child, h2:first-child, h3:first-child {
         margin-top: 0;
     }
 }
-p, span, ul, li, button  {
+p, span, ul, li, button {
     color: #5e5e5e;
     font-size: 1.6rem;
+}
+p {
+    line-height: 2.5rem;
+    margin-top: 0;
 }
 a {
     color: $color_main;
     text-decoration: underline;
 }
-	a:hover {
-	    text-decoration: none;
-	}
-	a:visited {
-	    color: #296d5c;
-	}
-	a:focus {
-	    color: #1b997b;
-	}
-table {}
-table tr {}
-
+a:hover {
+    text-decoration: none;
+}
+a:visited {
+    color: #296d5c;
+}
+a:focus {
+    color: #1b997b;
+}
+table {
+    width: 100%;
+}
+table tr {
+    font-size: 1.6rem;
+    line-height: 2.5rem;
+    position: relative;
+    ovarflow: hidden;
+    td {
+        padding: 1rem 2rem;
+    }
+    &:nth-child(odd) {
+        td {
+            background-color: #fff;
+        }
+    }
+    &:nth-child(even) {
+        td {
+            background-color: #e3f2ff;
+        }
+    }
+}
+table.guestbook-switch tr td {
+    padding: 0;
+}
 ul {
-    padding-left: 1.4rem;
-    margin-left: 1.5rem;
+    padding-left: 1.3rem;
+    margin-left: 1.3rem;
+    list-style: none;
     li {
+        position: relative;
         margin-bottom: 1rem;
-
-        // &:before {
+        list-style: none; // &:before {
         //     @include pseudo;
-
-        //     left: -1.4rem;
+        //     left: -2.6rem;
         //     top: .5rem;
-
-        //     width: .5rem;
-        //     height: .2rem;
-
-        //     background-color: $color_main-dark;
+        //     width: .8rem;
+        //     height: .8rem;
+        //     border-radius: 50%;
+        //     background-color: $color_blue-l;
         // }
     }
 }
-
-// @media screen and (max-width: 1024px) {
-//     html {
-//         font-size: 57.5%;
-//     }
-// }
-
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 1024px) {
     h1 {
-        font-size: 4.5rem;
+        font-size: 3.3rem;
+        .subheading {
+            font-size: 2.2rem;
+        }
+    }
+    h2 {
+        font-size: 2.5rem;
+        .subheading {
+            font-size: 1.9rem;
+        }
+    }
+    h3 {
+        font-size: 1.8rem;
+    }
+}
+@media screen and (max-width: 569px) {
+    h1 {
+        font-size: 3rem;
+        .subheading {
+            font-size: 2.1rem;
+        }
+    }
+    h2 {
+        font-size: 2.2rem;
+        .subheading {
+            font-size: 1.9rem;
+        }
+    }
+    h3 {
+        font-size: 1.8rem;
     }
 }

@@ -27,49 +27,40 @@ $(document).ready(function(){
     // slider on main screen
     var swiperHero = new Swiper('.swiper-container-hero', {
         effect: 'slide',
-/*
-        fadeEffect: {
-            crossFade: false
-        },*/
-        autoplay: {
-            delay: 3000,
-        },
+        // autoplay: {
+        //     delay: 3000,
+        // },
     });
 
-    swiperHero.on('slideChange', function () {
-      console.log('slide changed');
-       // new WOW().init();
+    var swiperFeedback = new Swiper('.swiper-container-feedback', {
+        // autoplay: {
+        //     delay: 3000,
+        // },
+        slidesPerView: 3,
+        spaceBetween: 30,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+    });
        
 
+     wows = new WOW(
+      {
+        boxClass:     'wows',      // класс, скрывающий элемент до момента отображения на экране (по умолчанию, wow)
+        animateClass: 'animated', // класс для анимации элемента (по умолчанию, animated)
+        offset:       0,          // расстояние в пикселях от нижнего края браузера до верхней границы элемента, необходимое для начала анимации (по умолчанию, 0)
+        mobile:       true,       // включение/отключение WOW.js на мобильных устройствах (по умолчанию, включено)
+        live:         true,       // поддержка асинхронно загруженных элементов (по умолчанию, включена)
+        callback:     function(box) {
+          // функция срабатывает каждый раз при старте анимации
+          // аргумент box — элемент, для которого была запущена анимация
+        },
+        scrollContainer: null // селектор прокручивающегося контейнера (опционально, по умолчанию, window)
+      }
+    ).init();
 
- wows = new WOW(
-  {
-    boxClass:     'wows',      // класс, скрывающий элемент до момента отображения на экране (по умолчанию, wow)
-    animateClass: 'animated', // класс для анимации элемента (по умолчанию, animated)
-    offset:       0,          // расстояние в пикселях от нижнего края браузера до верхней границы элемента, необходимое для начала анимации (по умолчанию, 0)
-    mobile:       true,       // включение/отключение WOW.js на мобильных устройствах (по умолчанию, включено)
-    live:         true,       // поддержка асинхронно загруженных элементов (по умолчанию, включена)
-    callback:     function(box) {
-      // функция срабатывает каждый раз при старте анимации
-      // аргумент box — элемент, для которого была запущена анимация
-    },
-    scrollContainer: null // селектор прокручивающегося контейнера (опционально, по умолчанию, window)
-  }
-).init();
     });
-
-
-    // var swiperHero = new Swiper('.swiper-container-hero');
-
-    // filter objects
-    $('.objects__filter-links li a').click(function(e) {
-//        e.preventDefault();
-//        $('.objects__filter-links li a').removeClass('active');
-//        $(this).addClass('active');
-    })
-
-});
-
 
 
     /* МОДАЛЬНЫЕ ОКНА */
@@ -309,9 +300,15 @@ $(document).ready(function () {
 
 });
 
+function moveProgress() {
+  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrolled = (winScroll / height) * 100;
+  document.getElementById("progress").style.width = scrolled + "%";
+}
+
+
 // STICKY HEADER
-
-
 function showStickyHeader() {
     // var heroHeight = $('.hero').height();
     // console.log(heroHeight);
@@ -388,6 +385,7 @@ $(document).ready(function() {
     $('.js-scroll-to-top').click(scrollToTop);
     $(window).scroll(showStickyHeader);  
     $(window).scroll(showToTopButton);    
+    $(window).scroll(moveProgress);    
 });
 
 // close on "esc"

@@ -9,14 +9,13 @@
 	min-height: 100vh;
 
 	background-color: #fff;
+	background-image: url(/img/bg/bg-theme-1_transparent.png);
+	background-position: bottom right;
+	background-repeat: no-repeat;
+	background-size: 650px;
 	color: #fff;
 	padding-bottom: 5rem;
 	overflow-y: auto;
-
-
-	// z-index: 10;
-
-	// transform: translateY(-150%);
 
 	opacity: 0;
 	z-index: -2;
@@ -135,6 +134,11 @@
 	.menu__header {
 		// height: 24rem;
 		padding: 2rem 3rem;
+	}
+	.menu {
+		background-position: bottom left;
+		background-repeat: no-repeat;
+		background-size: 769px;
 	}
 	// 	.tel {
 	// 		display: block;

@@ -17,6 +17,9 @@
 @import "block/buttons/btn-calc";
 @import "block/buttons/btn-specials";
 
+// single photo
+@import "block/photo";
+
 // icons
 @import "block/icons/icons";
 
@@ -32,6 +35,9 @@
 
 // swiper
 @import "block/swiper/swiper";
+
+// tabs
+@import "block/tabs/section-tabs";
 
 // page layout
 @import "block/page-header";
@@ -97,9 +103,24 @@
 @import "block/feedback-list";
 @import "block/feedback-item";
 
+// contacts
+@import "block/contacts";
+
 // sidebar
 @import "block/block-sidebar";
 @import "block/object-sidebar";
+
+// infopraphics
+@import "block/infograph";
+
+// tel-line
+@import "block/tel-line";
+
+// well
+@import "block/well";
+@import "block/person";
+
+
 
 // animate lib
 @import "block/animate/animate";
@@ -113,5 +134,5 @@
 
 
 // accordeon
-// @import "block/accordeon/accordeon";
+@import "block/accordeon/accordeon";
 

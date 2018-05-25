@@ -16,37 +16,68 @@
 }
 
 .h-section-margin {
-	margin-bottom: 4rem;
+	margin-bottom: $gutter;
 }
 .h-no-bullets {
 	list-style: none;
 	padding:0;
 }
 
-.h-fancy-list {
-	list-style: none;
+.h-gutter-padding {
+	padding: $gutter 0 $gutter 0;
+}
 
-	@include flex-row(wrap, space-between, flex-start);	
+.h-no-top-gutter {
+	margin-top: -$gutter;
+}
 
-	li {
-		flex: 1 1 29%;
-		max-width: 29%;
-		padding: 1.5rem;
-		position: relative;
-		padding-left: 1.5rem;
+.h-heading-yes {	
+	color: $color_green-d;
+}
+.h-heading-no {
+	color: #ef6b6b;
+}
 
-		&:before {
+.h-list {
+    padding-left: 1.3rem;
+    margin-left: 1.3rem;
+    list-style: none;
+    li {
+        position: relative;
+        margin-bottom: 1rem;
+        list-style: none;
+
+        &:before {
             @include pseudo;
 
-            left: -1.4rem;
-            top: 2.8rem;
+            left: -2.6rem;
+            top: .5rem;
 
-            width: 1.5rem;
-            height: .2rem;
+            width: .8rem;
+            height: .8rem;
+            border-radius: 50%;
 
-            background-color: $color_main;
+            background-color: $color_blue-l;
         }
-	}
+    }
+}
+
+.h-list-no {
+    li {
+
+        &:before {
+            background-color: #ef6b6b;
+        }
+    }
+}
+
+.h-list-yes {
+    li {
+
+        &:before {
+            background-color: $color_green-l;
+        }
+    }
 }
 
 .h-bg {
@@ -62,31 +93,10 @@
 	margin: 0 0 0 2rem;
 }
 
-@media screen and (max-width: 1024px) {
-	.h-fancy-list {
-
-		li {
-			flex: 1 1 45%;
-			max-width: 45%;
-
-		}
-	}	
-}
-
 @media screen and (max-width: 768px) {
 	.h-lead-list {
 		float: none;
 		padding: 3rem;
 		margin: 0 0 0 0rem;
-	}	
-}
-
-@media screen and (max-width: 667px) {
-	.h-fancy-list {
-
-		li {
-			flex: 1 1 100%;
-
-		}
 	}	
 }

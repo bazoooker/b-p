@@ -1,6 +1,6 @@
 .news-link {
 	flex: 1 1 100%;
-	display: block;
+	@include flex-row(nowrap, space-between, flex-start);
 	
 	padding: 0 0 1.2rem 0;
 	margin: 0 0 1.2rem 0;
@@ -23,17 +23,25 @@
 }
 
 .news-item__img {
-	float: left;
-
-	width: 10rem;
+	// поведение
+	flex: 0 0 10rem;
 	height: 7rem;
-
 	margin-right: 2rem;
 
+	// стили
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
 }
+
+.news-item__text {
+	// поведение
+	flex-grow: 1;
+
+	// стили
+	text-align: left;
+}
+
 
 .news-item__heading {
 	font-size: 1.7rem;
