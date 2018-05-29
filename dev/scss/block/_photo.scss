@@ -57,9 +57,8 @@
 	//     height: 6rem;
 	//     left: 2.5rem;
 	//     top: -1.5rem;
-	//     background: url(/img/logo-white.png) #63cb8c no-repeat;
-	//     background-size: contain;
-	//     z-index: 1;
+	//     background: $color_blue-l;
+	//     z-index: -1;
 	// }
 }
 
@@ -74,6 +73,14 @@
 	cursor: pointer;
 
 	transition: 400ms;
+}
+
+.photo__description {
+	font-style: italic;
+    line-height: 2rem;
+    margin-top: 1rem;
+    color: #9a9898;
+    font-size: 1.5rem;
 }
 
 	

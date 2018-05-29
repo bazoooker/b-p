@@ -60,6 +60,21 @@
             background-color: $color_blue-l;
         }
     }
+    .h-list {
+        margin: 1rem 0;
+        li {
+            position: relative;
+            margin-bottom: 1rem;
+            list-style: none;
+            opacity: .9;
+            font-size: 1.5rem;
+            margin: 0 0 .4rem 0;
+            &:before {
+                background-color: #fff;
+                border: 2px solid $color_blue-l;
+            }           
+        }
+    }
 }
 
 .h-list-no {

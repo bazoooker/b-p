@@ -1,0 +1,62 @@
+.ref {
+	position: relative;
+	background-color: #e9f6ff;
+	text-style: italic;
+	padding: $gutter;
+	overflow: hidden;
+
+	p:first-child {
+		position: relative;
+		margin: 0 0 1rem 0;
+		padding: 0 0 1.2rem 0;
+		text-align: center;
+		text-transform: uppercase;
+
+		&:after {
+			position: absolute;
+		    content: '';
+		    bottom: 0;
+		    transform: translateX(-50%);
+		    left: 50%;
+		    width: 3.5rem;
+		    height: .2rem;
+		    background: #5facd7;
+		    opacity: .8;
+
+		    transition: 300ms;
+		}
+	}
+
+	p:last-child {
+		margin: 0 0 0 0;
+	}
+
+	&:after {
+		position: absolute;
+	    content: ' ? ';
+	    top: -4.2rem;
+	    left: -3.5rem;
+	    width: 4rem;
+	    height: 100%;
+	    font-size: 15.2rem;
+	    color: #b0d5f5;
+	    transform: rotate(15deg);
+	    opacity: .18;
+
+	    transition: 300ms;
+	}
+
+	&:hover {
+		
+		p:first-child {
+			&:after {
+			    width: 5.5rem;
+			    opacity: 1;
+			}
+		}
+		&:after {
+		    opacity: .4;
+		}
+	}
+
+}

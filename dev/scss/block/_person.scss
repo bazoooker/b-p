@@ -16,10 +16,23 @@
 	flex: 1 1 70%;
 }
 .person__name {
+	position: relative;	
 	font-weight: 600;
 	font-size: 1.9rem;
+	padding: 0 0 1.5rem 0;
+	margin: 0 0 1.5rem 0;
+
+	&:after {
+		position: absolute;
+	    content: '';
+	    width: 5rem;
+	    height: .2rem;
+	    left: 0;
+	    bottom: 0;
+	    background: $color_blue-l;
+	}
 }
 .person__lead {
 	background-color: #f3f3f3;
-	padding: 1rem;
+    padding: 1rem 1rem 1rem 2.5rem;
 }
