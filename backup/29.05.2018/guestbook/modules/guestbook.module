@@ -1,0 +1,31 @@
+<?
+ //
+ if ($action=='update')
+  {
+   include("forms/guestbook/update.form");
+  }
+ if ($action=='new')
+  {
+   include("forms/guestbook/new.form");
+  }
+ //
+ if ($action=='zoom')
+  {
+   include("forms/guestbook/zoom.form");
+  }
+ //
+ //
+ if ($action=='print')
+  {
+   include("forms/guestbook/print.form");
+  }
+ if ($action=='delete')
+  {
+   include("forms/guestbook/delete.form");
+  }
+ //
+ if ($action=='list')
+  {
+   include("forms/guestbook/list.form");
+  }
+?>

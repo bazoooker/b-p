@@ -1,0 +1,33 @@
+<?
+$content=$db->query("select * from guestbook where gid=$gid");
+?>
+<h1>Удаление записи</h1>
+<form name=f1   action="handlers/guestbook/delete.php?gid=<? echo $gid; ?>" method=post>
+	<table border=0>
+		<tr>
+			<td>
+				Сообщение
+			</td>
+			<td class=pseudoform>
+				<?echo $db->result($content, 0, "gmessage");?>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Имя				
+			</td>
+			<td class=pseudoform>
+				<?echo $db->result($content, 0, "gname");?>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				&nbsp;
+			</td>
+			<td>
+		    	<input type="button" value="Отменить" onClick="history.go(-1);">
+				<input type="submit" value="Удалить">
+			</td>
+		</tr>
+	</table>
+	</form>

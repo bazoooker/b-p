@@ -1,0 +1,151 @@
+.tagcontainer {
+    float: left;
+    width: 30%;
+
+    .left-side-nav-links {
+    	margin: 0 0 1rem 0;	
+    	padding: 0 0 1rem 0;	
+    }
+}
+
+.tagcontainer_opened {
+	transform: translateX(0) !important;
+	overflow-y: auto;
+	overflow-x: visible;
+	
+	.tagcontainer__btn {
+	    &:after {
+	    	transform: translateX(-50%) translateY(-50%) rotate(-135deg) !important;
+	    }
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.tagcontainer{
+	    position: fixed;
+	    top: 0;
+	    right: 0;
+	    height: 100%;
+	    width: 27rem;
+	    margin-right: 0;
+	    float: none;
+	    background: gainsboro;
+	    padding: $gutter 2rem;
+	    // overflow-y: scroll;
+	    z-index: 10;
+		
+		transition: 300ms;
+	    transform: translateX(100%);
+
+
+
+	    .tagcontainer__btn {
+	    	display: inline-block;
+			position: absolute;
+		    content: '';
+		    left: -4rem;
+		    top: 50%;
+		    transform: translateY(-50%);
+		    width: 4rem;
+		    height: 4rem;
+		    background-color: $color_blue-l;
+		    opacity: .8;
+		    background-repeat: no-repeat;
+		    z-index: 9;
+		    background-position: 50% 50%;
+		    cursor: pointer;
+
+		    &:after {
+		    	@include pseudo;
+
+		    	width: 1rem;
+		    	height: 1rem;
+
+		    	left: 50%;
+				
+		    	top: 50%;
+		    	transform: translateX(-15%)translateY(-50%) rotate(45deg);
+
+		    	background: transparent;
+
+		    	border-bottom: 2px solid #fff;
+		    	border-left: 2px solid #fff;
+
+		    	opacity: .7;
+
+		    	transition: 300ms;
+
+		    }
+
+		    &:hover {
+		    	background-color: lighten($color_blue-l, 10%);
+		    }
+		}
+
+		.tagcontainer__btn_close {
+	    	display: inline-block;
+			position: absolute;
+		    content: '';
+		    top: 2.5rem;
+		    right: .5rem;
+
+		    transform: translateY(-50%);
+		    width: 4rem;
+		    height: 4rem;
+		    background-color: transparent;
+		    opacity: .8;
+		    background-repeat: no-repeat;
+		    z-index: 9;
+		    background-position: 50% 50%;
+		    cursor: pointer;
+
+		    &:after {
+		    	@include pseudo;
+
+		    	width: 1rem;
+		    	height: 1rem;
+
+		    	left: 50%;
+				
+		    	top: 50%;
+		    	transform: translateX(-50%) rotate(-45deg);
+
+		    	width: 100%;
+		   		height: 2px;
+
+		   		background-color: #555;
+
+		    	opacity: .7;
+
+		    	transition: 300ms;
+
+		    }
+		   &:before{
+		    	@include pseudo;
+
+		    	width: 1rem;
+		    	height: 1rem;
+
+		    	left: 50%;
+				
+		    	top: 50%;
+		    	transform: translateX(-50%) rotate(45deg);
+
+		    	width: 100%;
+		   		height: 2px;
+
+		   		background-color: #555;
+
+		    	opacity: .7;
+
+		    	transition: 300ms;
+
+		    }
+
+		    &:hover:after,
+		    &:hover:before {
+		    	opacity: 1;
+		    }
+		}
+	}
+}

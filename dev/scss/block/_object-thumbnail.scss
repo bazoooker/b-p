@@ -11,6 +11,7 @@
 	cursor: pointer;
 
 	overflow: hidden;
+	z-index: 1;
 
 	@include flex-row(nowrap, center, flex-end);
 
@@ -41,17 +42,6 @@
 	}
 
 	&:hover {
-		// .object-thumbnail__text {
-		// 	height: 11rem;
-		// }
-
-
-		// .object-thumbnai__img  {
-		// 	transform: scale(1.1);
-
-			// &:before {
-			// 	transform: none;
-			// }
 
 		.object-thumbnail__text {
 			height: 100%;
@@ -75,6 +65,8 @@
 
 	background-size: cover;
 	background-position: 50% 50%;
+
+	z-index: -1;
 
 	transition: 400ms;
 
@@ -245,11 +237,19 @@
 	.object-thumbnail {
 		width: 100%;
    		margin-right: 0;
+
+   		&:hover {
+   			.object-thumbnail__text {
+   				    height: 6.3rem;
+   			}
+   		}
 	}
 
 	.object-thumbnail__short {
 		display: none;
 	}
+
+
 }
 
 // @media screen and (min-width: 768px) and (max-width: 960px) {

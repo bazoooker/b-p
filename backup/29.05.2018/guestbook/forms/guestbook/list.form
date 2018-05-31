@@ -1,0 +1,82 @@
+	<?
+		if (!$page) $page=0;
+		$from=$msgsperpage*$page;
+		$to=$msgsperpage*($page+1);
+	?>
+<table border=0 width=100%>
+<tr>
+<td>
+<h1>
+Список отзывов
+</h1>
+</td>
+<td align=right>
+    		<a href="<? echo $sitepath.$apppath.$adminscr;?>?object=guestbook&action=new">
+		   		<img border=0 src="/common/images/createin.gif" alt="">
+	        </a>
+</td>
+</tr>
+</table>
+	<?
+	//
+	$totalcount=$db->result($db->query("select count(*) from guestbook"),0,"count(*)");
+	//
+	$content=$db->query("select *,date_format(gdate,'$dtformat') as gdatef from guestbook order by gdate desc limit $from, $msgsperpage");
+	$count=$db->numrows($content);
+	?>
+	<table border=0 width=100%>
+		<tr>
+			<td>
+	<?
+	   print "<p>Записи с ".($from+1)." по ".(($count<$msgsperpage)?($from+$count):($from+$msgsperpage))."</p>";
+	?>
+			</td>
+			<td align=right>
+	<p>Страницы:
+	<?
+	for ($i=0;$i<$totalcount/$msgsperpage;$i++) {
+		print " <a href=\"$sitepath$apppath$adminscr?object=guestbook&action=list&page=$i\">".($i==$page?"<b>":"").($i+1).($i==$page?"</b>":"")."</a> ";
+	}
+	?>
+	</p>
+			</td>
+		</tr>
+	</table>
+	<br>
+<table border=0 cellspacing=1 cellpadding=3 width=100%>
+	<tr>
+		<td class=thead><nobr>Дата</nobr></td>
+		<td class=thead>Имя</td>
+        <td class=thead colspan=4>&nbsp;</td>
+	</tr>
+    <?
+    for ($i=0; $i< ($db->numrows($content)); $i++){
+		$gid=$db->result($content, $i, "gid");
+		$gdate=$db->result($content, $i, "gdatef");
+    	$gmessage=$db->result($content, $i, "gmessage");
+	   	$gname=$db->result($content, $i, "gname");
+    	$gmail=$db->result($content, $i, "gmail");
+
+    	$gcountry=$db->result($content, $i, "gcountry");
+    	$gcity=$db->result($content, $i, "gcity");
+    	$gvisible=$db->result($content, $i, "gvisible");
+    ?>
+	<tr bgcolor="#ffffff">
+	   	<td class=tbodyd><? echo $gdate ;?></td>
+		<td class=tbodyd><? echo $gname ;?></td>
+		<td class=tbodyd width=1><a href="handlers/guestbook/swapvisibility.php?page=<? echo $page; ?>&gid=<? echo $gid; ?>&gvisible=<?echo ($gvisible=="y"?"n":"y");?>"><img src=/common/images/show<? echo $gvisible; ?>.gif alt="<? echo $msg_guestbook_list_visible;?>" border=0></a></td>
+    	<td class=tbodyd width=1>
+    		<a href="<? echo $sitepath.$apppath.$adminscr;?>?object=guestbook&action=update&gid=<? echo $gid;?>">
+		   		<img border=0 src="/common/images/edit.gif" alt="<? echo $msg_guestbook_update_submit; ?>">
+	        </a>
+		</td>
+    	<td class=tbodyd width=1>
+	   		<a href="<? echo $sitepath.$apppath.$adminscr;?>?object=guestbook&action=delete&gid=<? echo $gid;?>">
+		   		<img border=0 src="/common/images/delete.gif" alt="<? echo $msg_guestbook_delete_submit; ?>">
+	        </a>
+		</td>
+    </tr>
+	<?
+	}
+	?>
+</table>

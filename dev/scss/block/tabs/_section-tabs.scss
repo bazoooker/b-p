@@ -9,9 +9,7 @@
 
 // HORIZONTAL TABS
 .section-tabs_horizontal {
-	@include flex-row(nowrap, space-between, flex-start);
-	 flex-flow: column nowrap;
-	 align-items: stretch;
+	@include flex-row(wrap, space-between, stretch);
 
 	.section-tabs__tabs {
 		/*поведение*/
@@ -31,7 +29,7 @@
 
 		  	& > li {
 		      /*поведение*/
-		      flex: 1 1 33%;
+		      flex: 1 1 26%;
 
 		      // отступы
 		      padding: 1.5rem 3rem 1.5rem 1.5rem;
@@ -234,9 +232,10 @@
 		width: 95%; 
 		margin: 0 auto;
 	}
-    	.section-tabs_horizontal,
     	.section-tabs_vertical {        
-    	    	flex-direction: column;
+    		.section-tabs__tabs {
+    			margin: 0;
+    		}
     	}
 	.section-tabs {
 		width: 100%;
@@ -247,6 +246,10 @@
     	.section-tabs__tabs > ul {
     		display: none !important;
     	}
+
+	.section-tabs_vertical {
+		min-height: 49rem;
+	}
 }
 
 
@@ -310,7 +313,7 @@
     	}
 }
 #mini_tab {
-  	width: 100%;
+	flex: 1 1 100%;
 }
 .cd-accordion-menu {
 	display: block;
@@ -329,8 +332,12 @@
     display: block;
     padding: 15px 40px 15px 15px;
     background: #fff;
+    border-bottom: 1px solid #eee;
     color: #555;
     cursor: pointer;
+}
+.has-children:last-child label {
+	border-bottom: 0;
 }
 .has-children label:after {
     content: '';

@@ -50,3 +50,20 @@
 		opacity: 0;
 	}
 }
+
+@media screen and (max-width: 1024px) {
+	.hero-object-thumbnail {
+		flex: 0 1 10rem;
+	}
+}
+
+@media screen and (max-width: 667px) {
+	.hero-object-thumbnail {
+		flex: 0 1 5.5rem;
+		margin-right: .5rem;
+		&:last-child {
+			margin-right: 0;
+		}
+
+	}
+}

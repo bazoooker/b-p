@@ -1,0 +1,175 @@
+<?
+$content=$db->query("select * from guestbook where gid=$gid");
+?>
+<h1>Изменение записи</h1>
+<form name=f1 ENCTYPE="multipart/form-data"  action="handlers/guestbook/update.php?gid=<? echo $gid; ?>" method=post>
+	<table border=0>
+		<!-- tr>
+			<td>
+				Привязка к объекту
+			</td>
+			<td>
+				<input type=text style="width:100%" name=gobj value="<?echo $db->result($content, 0, "gobj");?>">
+			</td>
+		</tr -->
+		<tr>
+			<td>
+				Категория
+			</td>
+			<td>
+			    <select name=gobj>
+				<option value="9" <?echo ($db->result($content, 0, "gobj")=="9")?" selected ":"";?>>ВИП
+				<option value="1" <?echo ($db->result($content, 0, "gobj")=="1")?" selected ":"";?>>Белокуриха
+				<option value="2" <?echo ($db->result($content, 0, "gobj")=="2")?" selected ":"";?>>Катунь
+				<option value="3" <?echo ($db->result($content, 0, "gobj")=="3")?" selected ":"";?>>Сибирь
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Дата
+			</td>
+			<td>
+				<input type=text style="width:100%" name=gdate value="<?echo $db->result($content, 0, "gdate");?>">
+			</td>
+		</tr>
+		<tr>
+			<td>
+			Сообщение
+			</td>
+			<td>
+				<textarea name=gmessage style="width:100%" cols=75 rows=5><?echo $db->result($content, 0, "gmessage");?>
+                </textarea>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			Ответ
+			</td>
+			<td>
+				<textarea name=ganswer style="width:100%" cols=75 rows=5><?echo $db->result($content, 0, "ganswer");?></textarea>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Имя в отзыве
+			</td>
+			<td>
+				<input type=text size=75 style="width:100%" name=gname value="<?echo $db->result($content, 0, "gname");?>">
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Имя в ответе
+			</td>
+			<td>
+				<input type=text size=75 style="width:100%" name=ganswername value="<?echo $db->result($content, 0, "ganswername");?>">
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Фото
+			</td>
+			<td>
+<?
+if(trim($db->result($content, 0, "gfile"))!="") {
+?>
+			<img src="/guestbook/image.php?gid=<? echo $gid;?>&mode=full" border=0><br>
+<?
+}
+?>
+				<input type=file size=50 name=gfile value="" style="width:100%">
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Ссылка с отзыва
+			</td>
+			<td>
+				<input type=text size=75 style="width:100%" name=glink value="<?echo $db->result($content, 0, "glink");?>">
+			</td>
+		</tr>
+		<tr>
+			<td>
+				E-mail
+			</td>
+			<td>
+				<input type=text size=75 name=gmail style="width:100%" value="<?echo $db->result($content, 0, "gmail");?>">
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Номер комнаты
+			</td>
+			<td>
+				<input type=text size=75 name=groom style="width:100%" value="<?echo $db->result($content, 0, "groom");?>">
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Дата проживания
+			</td>
+			<td>
+				<input type=text size=75 name=gcity style="width:100%" value="<?echo $db->result($content, 0, "gcity");?>">
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Оценка
+			</td>
+			<td>
+				<input type=text size=75 name=gmark style="width:100%" value="<?echo $db->result($content, 0, "gmark");?>">
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Телефон
+			</td>
+			<td>
+				<input type=text size=75 name=gphone style="width:100%" value="<?echo $db->result($content, 0, "gphone");?>">
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Виден на сайте
+			</td>
+			<td>
+			    <select name=gvisible>
+				<option value="y" <?echo ($db->result($content, 0, "gvisible")=="y")?" selected ":"";?>>Да
+				<option value="n" <?echo ($db->result($content, 0, "gvisible")=="n")?" selected ":"";?>>Нет
+				</select>
+			</td>
+		</tr>
+		<!-- tr>
+			<td>
+				Виден на главной
+			</td>
+			<td>
+			    <select name=ghome>
+				<option value="y" <?echo ($db->result($content, 0, "ghome")=="y")?" selected ":"";?>>Да
+				<option value="n" <?echo ($db->result($content, 0, "ghome")=="n")?" selected ":"";?>>Нет
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Виден на внутренней
+			</td>
+			<td>
+			    <select name=ginner>
+				<option value="n" <?echo ($db->result($content, 0, "ginner")=="n")?" selected ":"";?>>Нет
+				<option value="y" <?echo ($db->result($content, 0, "ginner")=="y")?" selected ":"";?>>Да
+				</select>
+			</td>
+		</tr -->
+		<tr>
+			<td>
+				&nbsp;
+			</td>
+			<td>
+		    	<input type="button" value="Отменить" onClick="history.go(-1);">
+				<input type="submit" value="Сохранить изменения">
+			</td>
+		</tr>
+	</table>
+	</form>
